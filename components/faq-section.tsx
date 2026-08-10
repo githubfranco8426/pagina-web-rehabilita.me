@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "¿Cuál es su horario de atención?",
     answer:
-      "Atendemos de lunes a sábado, de 09:00 a 20:00 horas, en consulta, a domicilio y online. Coordina el horario exacto de tu hora por WhatsApp.",
+      "Atendemos de lunes a sábado, de 08:00 a 20:00 horas, en consulta, a domicilio y online. Coordina el horario exacto de tu hora por WhatsApp.",
   },
   {
     question: "¿Qué pasa si necesito reagendar o cancelar?",
