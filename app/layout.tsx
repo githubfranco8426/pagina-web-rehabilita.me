@@ -10,9 +10,13 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rehabilitame.cl'),
   title: 'rehabilita.me · Kinesiología respiratoria y fonoaudiología en Iquique',
   description:
     'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en hospital, a domicilio y en consulta particular. Agenda tu hora por WhatsApp.',
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/images/logo-oficial.jpg',
   },

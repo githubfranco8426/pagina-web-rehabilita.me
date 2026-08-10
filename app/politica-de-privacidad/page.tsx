@@ -5,6 +5,9 @@ import { brand } from "@/lib/brand"
 export const metadata: Metadata = {
   title: "Política de Privacidad · rehabilita.me",
   description: "Cómo rehabilita.me recopila, usa y protege tus datos personales.",
+  alternates: {
+    canonical: "/politica-de-privacidad",
+  },
 }
 
 export default function PoliticaDePrivacidadPage() {
