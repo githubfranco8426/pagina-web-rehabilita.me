@@ -80,7 +80,7 @@ export function Hero() {
             </p>
             <p className="text-sm md:text-base leading-[1.75] text-muted-foreground">
               Cuidamos de ti con servicios de kinesiología respiratoria, maxilofacial y
-              fonoaudiología de adultos.
+              fonoaudiología, para toda la familia.
             </p>
             <p className="text-sm md:text-base leading-[1.75] text-muted-foreground">
               🏡 Atención a domicilio en Iquique, en consulta y vía online.

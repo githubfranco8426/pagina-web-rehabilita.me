@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { brand } from "@/lib/brand"
+import { brand, whatsappConsultasLink } from "@/lib/brand"
 import { fadeIn, viewportOnce } from "@/lib/motion"
 
 const footerLinks = [
@@ -59,6 +59,14 @@ export function Footer() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-5">Contacto</p>
           <div className="flex flex-col gap-3">
             <a
+              href={whatsappConsultasLink()}
+              target="_blank"
+              rel="noopener"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300"
+            >
+              WhatsApp — {brand.contact.whatsappConsultasDisplay}
+            </a>
+            <a
               href={brand.contact.instagramUrl}
               target="_blank"
               rel="noopener"
@@ -74,7 +82,15 @@ export function Footer() {
         <p className="text-[11px] tracking-[0.1em] text-muted-foreground/50">
           © {year} rehabilita.me · Iquique
         </p>
-        <p className="text-[11px] tracking-[0.1em] text-muted-foreground/50">Iquique & Alto Hospicio</p>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/politica-de-privacidad"
+            className="text-[11px] tracking-[0.1em] text-muted-foreground/50 hover:text-foreground transition-colors duration-300"
+          >
+            Política de Privacidad
+          </Link>
+          <p className="text-[11px] tracking-[0.1em] text-muted-foreground/50">Iquique & Alto Hospicio</p>
+        </div>
       </div>
     </motion.footer>
   )
