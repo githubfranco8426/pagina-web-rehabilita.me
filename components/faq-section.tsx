@@ -29,6 +29,11 @@ const faqs = [
       "Recomendamos agendar con al menos 2 a 3 días de anticipación, aunque muchas veces tenemos disponibilidad para la misma semana.",
   },
   {
+    question: "¿Cuál es su horario de atención?",
+    answer:
+      "Atendemos de lunes a sábado, de 09:00 a 19:00 horas, en consulta, a domicilio y online. Coordina el horario exacto de tu hora por WhatsApp.",
+  },
+  {
     question: "¿Qué pasa si necesito reagendar o cancelar?",
     answer:
       "Puedes reagendar o cancelar tu hora escribiéndonos por WhatsApp con la mayor anticipación posible, para poder liberar el cupo a otro paciente.",

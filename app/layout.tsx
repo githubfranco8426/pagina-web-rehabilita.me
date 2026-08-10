@@ -55,6 +55,12 @@ const structuredData = {
   areaServed: ['Iquique', 'Alto Hospicio'],
   medicalSpecialty: ['Kinesiología respiratoria', 'Kinesiología maxilofacial', 'Fonoaudiología'],
   sameAs: [brand.contact.instagramUrl],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    opens: '09:00',
+    closes: '19:00',
+  },
 }
 
 // Google tag (GA4 + Google Ads). No se activa hasta que definas
