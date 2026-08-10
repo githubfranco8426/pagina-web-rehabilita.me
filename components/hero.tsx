@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Calendar, Stethoscope, Instagram, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { bookingAppReservarUrl, brand } from "@/lib/brand"
+import { trackBookingClick } from "@/lib/analytics"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -93,7 +94,12 @@ export function Hero() {
               size="lg"
               className="rounded-full bg-sky-500 hover:bg-sky-600 text-white px-6 h-12 text-xs tracking-[0.1em] uppercase gap-2"
             >
-              <a href={bookingAppReservarUrl} target="_blank" rel="noopener">
+              <a
+                href={bookingAppReservarUrl}
+                target="_blank"
+                rel="noopener"
+                onClick={() => trackBookingClick("hero")}
+              >
                 <Calendar className="h-4 w-4" />
                 Quiero agendar una consulta
               </a>

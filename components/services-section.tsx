@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUpRight, Wind, Baby, Activity, Ear, Brain, Utensils } 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { bookingAppReservarUrl, whatsappConsultasLink } from "@/lib/brand"
+import { trackBookingClick, trackWhatsappClick } from "@/lib/analytics"
 import { fadeInUp, viewportOnce } from "@/lib/motion"
 import { WhatsappIcon } from "@/components/whatsapp-icon"
 
@@ -134,6 +135,7 @@ function ServiceCard({
           href={bookingAppReservarUrl}
           target="_blank"
           rel="noopener"
+          onClick={() => trackBookingClick(`service_card_${service.title}`)}
           className={cn(
             "inline-flex items-center gap-2 text-[11px] tracking-[0.1em] uppercase border-b pb-0.5 transition-colors duration-300",
             active ? "text-white border-white/40 hover:border-white" : `text-foreground ${accentClasses[service.accent].border}`,
@@ -181,7 +183,12 @@ export function ServicesSection() {
               asChild
               className="bg-sky-500 text-white rounded-full px-6 h-11 font-medium hover:bg-sky-600 transition-colors"
             >
-              <a href={bookingAppReservarUrl} target="_blank" rel="noopener">
+              <a
+                href={bookingAppReservarUrl}
+                target="_blank"
+                rel="noopener"
+                onClick={() => trackBookingClick("services_main")}
+              >
                 Agendar hora
                 <ArrowRight className="size-4" />
               </a>
@@ -192,6 +199,7 @@ export function ServicesSection() {
               href={whatsappConsultasLink("Hola, no estoy seguro/a qué servicio necesito, ¿me pueden orientar?")}
               target="_blank"
               rel="noopener"
+              onClick={() => trackWhatsappClick("services_orientacion")}
               aria-label="Escríbenos por WhatsApp"
               className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition-colors duration-300 hover:bg-[#1ebe57]"
             >

@@ -6,6 +6,7 @@ import Link from "next/link"
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion"
 import { Menu, X, Stethoscope, Users, GalleryHorizontalEnd, HelpCircle, Wind, Baby, Activity, Ear, Brain } from "lucide-react"
 import { bookingAppReservarUrl } from "@/lib/brand"
+import { trackBookingClick } from "@/lib/analytics"
 import { ServiceToastProvider, useServiceToast } from "@/lib/service-toast-context"
 import { ServiceToastContainer } from "@/components/service-toast"
 import { ChipCarousel, type ChipItem } from "@/components/chip-carousel"
@@ -132,6 +133,7 @@ function ClinicalServicesSidebar() {
     const service = clinicalServices.find((s) => s.id === id)
     if (!service) return
     addToast(service.label, `Te llevamos a agendar — ${service.description}`, service.variant)
+    trackBookingClick(`nav_dock_${id}`)
     window.open(bookingAppReservarUrl, "_blank", "noopener")
   }
 
@@ -198,6 +200,7 @@ export function Navigation() {
               href={bookingAppReservarUrl}
               target="_blank"
               rel="noopener"
+              onClick={() => trackBookingClick("nav_desktop")}
               className="text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-colors duration-500"
             >
               Agendar hora
@@ -249,7 +252,10 @@ export function Navigation() {
                   href={bookingAppReservarUrl}
                   target="_blank"
                   rel="noopener"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false)
+                    trackBookingClick("nav_mobile")
+                  }}
                   className="text-sm tracking-[0.15em] uppercase px-4 py-3 rounded-full bg-sky-500 text-white text-center mt-2"
                 >
                   Agendar hora

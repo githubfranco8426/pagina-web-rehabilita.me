@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { brand, whatsappConsultasLink } from "@/lib/brand"
+import { trackWhatsappClick } from "@/lib/analytics"
 import { fadeInUp, viewportOnce } from "@/lib/motion"
 import { WhatsappIcon } from "@/components/whatsapp-icon"
 
@@ -35,7 +36,7 @@ const faqs = [
   {
     question: "¿Qué medios de pago aceptan?",
     answer:
-      "Aceptamos efectivo y transferencia. Coordina el detalle directamente con nosotros al momento de confirmar tu hora.",
+      "Aceptamos efectivo y transferencia. Emitimos boleta de honorarios, que puedes presentar a tu Isapre para reembolso según tu plan. Coordina el detalle directamente con nosotros al momento de confirmar tu hora.",
   },
 ]
 
@@ -64,6 +65,7 @@ export function FaqSection() {
             href={whatsappConsultasLink()}
             target="_blank"
             rel="noopener"
+            onClick={() => trackWhatsappClick("faq")}
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#25D366] text-white pl-3 pr-5 py-2.5 text-sm font-medium hover:bg-[#1ebe57] transition-colors duration-300"
           >
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/20">

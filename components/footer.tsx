@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { brand, whatsappConsultasLink } from "@/lib/brand"
+import { trackWhatsappClick } from "@/lib/analytics"
 import { fadeIn, viewportOnce } from "@/lib/motion"
 
 const footerLinks = [
@@ -62,6 +63,7 @@ export function Footer() {
               href={whatsappConsultasLink()}
               target="_blank"
               rel="noopener"
+              onClick={() => trackWhatsappClick("footer")}
               className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300"
             >
               WhatsApp — {brand.contact.whatsappConsultasDisplay}
