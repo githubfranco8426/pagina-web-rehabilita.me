@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { whatsappLink } from "@/lib/brand"
+import { whatsappConsultasLink } from "@/lib/brand"
 import { WhatsappIcon } from "@/components/whatsapp-icon"
 
 export function WhatsappFab() {
@@ -27,7 +27,7 @@ export function WhatsappFab() {
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
-          href={whatsappLink()}
+          href={whatsappConsultasLink()}
           target="_blank"
           rel="noopener"
           aria-label="Agendar por WhatsApp"
