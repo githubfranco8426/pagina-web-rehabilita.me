@@ -17,7 +17,7 @@ const modalities = [
     number: "01",
     title: "Consulta particular",
     description:
-      "Evaluación, atención y seguimiento de tratamiento de kinesiología respiratoria, kinesiología maxilofacial y fonoaudiología adulto / lactancia / frenillo lingual.",
+      "Evaluación, atención y seguimiento de tratamiento de kinesiología respiratoria, kinesiología maxilofacial y fonoaudiología: frenillo lingual, lactancia y neuro-adultos.",
     icon: Building2,
     color: "sky",
   },
