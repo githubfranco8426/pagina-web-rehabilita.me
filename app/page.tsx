@@ -8,6 +8,7 @@ import { ApproachSection } from "@/components/approach-section"
 import { CasesSection } from "@/components/cases-section"
 import { JournalSection } from "@/components/journal-section"
 import { FaqSection } from "@/components/faq-section"
+import { BookingWidgetSection } from "@/components/booking-widget-section"
 import { Footer } from "@/components/footer"
 import { WhatsappFab } from "@/components/whatsapp-fab"
 
@@ -25,6 +26,7 @@ export default function Page() {
         <ApproachSection />
         <JournalSection />
         <FaqSection />
+        <BookingWidgetSection />
         <Footer />
       </main>
       <WhatsappFab />
