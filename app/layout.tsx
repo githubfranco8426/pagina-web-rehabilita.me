@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
   title: 'rehabilita.me · Kinesiología respiratoria y fonoaudiología en Iquique',
   description:
-    'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en hospital, a domicilio y en consulta particular. Agenda tu hora por WhatsApp.',
+    'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en consulta, a domicilio y online. Agenda tu hora por WhatsApp.',
   alternates: {
     canonical: '/',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'rehabilita.me · Kinesiología y fonoaudiología en Iquique',
-    description: 'Cuidamos cómo respiras y cómo te comunicas. Atención en hospital, a domicilio y en consulta particular.',
+    description: 'Cuidamos cómo respiras y cómo te comunicas. Atención en consulta, a domicilio y online.',
     images: ['/images/logo-oficial.jpg'],
     type: 'website',
   },
