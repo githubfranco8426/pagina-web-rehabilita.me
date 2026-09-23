@@ -25,7 +25,7 @@ const modalities = [
     number: "02",
     title: "Domicilio",
     description:
-      "Vamos a tu domicilio en Iquique y Alto Hospicio. Cuando el traslado es difícil, es más efectivo nuestro tratamiento en tu propio entorno.",
+      "Vamos a tu domicilio en Iquique y Alto Hospicio. Así puedes recibir atención en tu propio entorno cuando trasladarte resulta difícil.",
     icon: Home,
     color: "terracotta",
   },

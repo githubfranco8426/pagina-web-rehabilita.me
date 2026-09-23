@@ -1,56 +1,65 @@
-"use client"
-
-import { Blog7 } from "@/components/ui/blog7"
+import { ArrowUpRight, HeartHandshake, MessageCircle, Wind } from "lucide-react"
 import { brand } from "@/lib/brand"
 
-const posts = [
+const topics = [
   {
-    id: "post-1",
-    title: "Lo que sí y lo que no sobre la kinesiología respiratoria",
-    summary:
-      "Aclaramos los mitos más comunes sobre nebulización, secreciones y cuándo es realmente necesario consultar a un kinesiólogo respiratorio.",
-    label: "Mitos vs. realidad",
-    author: "rehabilita.me",
-    published: "Instagram",
-    url: brand.contact.instagramUrl,
-    image: "/images/nebulizador-flatlay.webp",
-    masLeido: true,
+    icon: Wind,
+    category: "Respiración",
+    title: "Entender qué pasa cuando respirar cuesta.",
+    description: "Preguntas frecuentes, mitos y cuidados cotidianos explicados con claridad.",
   },
   {
-    id: "post-2",
-    title: "Procesos de recuperación de pacientes, contados paso a paso",
-    summary:
-      "Con el permiso de cada familia, mostramos avances reales de kinesiología a domicilio: de la hospitalización a caminar de nuevo.",
-    label: "Casos reales",
-    author: "rehabilita.me",
-    published: "Instagram",
-    url: brand.contact.instagramUrl,
-    image: "/images/domicilio-caminador.webp",
+    icon: HeartHandshake,
+    category: "Rehabilitación",
+    title: "Acompañar la recuperación paso a paso.",
+    description: "Ideas prácticas para pacientes y familias durante el proceso en casa.",
   },
   {
-    id: "post-3",
-    title: "Cuidados en casa para niños y adultos con condiciones respiratorias",
-    summary:
-      "Consejos prácticos de manejo de inhaladores, posiciones y señales de alerta para acompañar el tratamiento entre sesiones.",
-    label: "Consejos prácticos",
-    author: "rehabilita.me",
-    published: "Instagram",
-    url: brand.contact.instagramUrl,
-    image: "/images/inhalador-adulto.webp",
+    icon: MessageCircle,
+    category: "Fonoaudiología",
+    title: "Cuidar cómo nos comunicamos y alimentamos.",
+    description: "Información útil sobre habla, voz, lactancia y deglución.",
   },
 ]
 
 export function JournalSection() {
   return (
-    <section id="instagram">
-      <Blog7
-        tagline="Contenido educativo"
-        heading="Nos encuentras todos los días en Instagram"
-        description={`Mitos vs. realidad, casos reales y consejos prácticos sobre kinesiología respiratoria, maxilofacial y fonoaudiología. Síguenos en ${brand.contact.instagramHandle}.`}
-        buttonText={`Seguir ${brand.contact.instagramHandle}`}
-        buttonUrl={brand.contact.instagramUrl}
-        posts={posts}
-      />
+    <section id="instagram" className="bg-sky-50/70 px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-sky-700">Contenido educativo</p>
+            <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-sky-900 md:text-5xl">
+              Respuestas claras para cuidar mejor.
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-foreground/75">
+              Compartimos información útil sobre kinesiología respiratoria, rehabilitación y fonoaudiología.
+            </p>
+          </div>
+          <a
+            href={brand.contact.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-sky-700/25 bg-background px-6 font-semibold text-sky-800 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600"
+          >
+            Seguir {brand.contact.instagramHandle}
+            <ArrowUpRight className="size-5" aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {topics.map((topic) => (
+            <div key={topic.category} className="rounded-3xl border border-sky-900/10 bg-background p-7 shadow-[0_15px_40px_-30px_rgba(27,54,93,.4)]">
+              <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
+                <topic.icon className="size-6" aria-hidden="true" />
+              </span>
+              <p className="mt-7 text-sm font-semibold uppercase tracking-[0.14em] text-terracotta-700">{topic.category}</p>
+              <h3 className="mt-3 text-xl font-semibold leading-snug text-sky-900">{topic.title}</h3>
+              <p className="mt-4 text-base leading-relaxed text-foreground/70">{topic.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

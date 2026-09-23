@@ -5,9 +5,8 @@ import { UserRound } from "lucide-react"
 import { fadeInUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/motion"
 
 const stats = [
-  { value: "10+", label: "Años de trayectoria", color: "text-sky-400" },
-  { value: "2", label: "Especialidades bajo un mismo equipo", color: "text-terracotta-400" },
-  { value: "3", label: "Modalidades: consulta, domicilio y online", color: "text-sky-400" },
+  { value: "2", label: "Profesionales en un mismo equipo", color: "text-sky-400" },
+  { value: "3", label: "Modalidades: consulta, domicilio y online", color: "text-terracotta-400" },
 ]
 
 const team = [
@@ -20,8 +19,8 @@ const team = [
     color: "text-sky-500",
   },
   {
-    name: "Barbara E. Covarrubias Piñero",
-    role: "Fonoaudióloga de adultos",
+    name: "Bárbara E. Covarrubias Piñero",
+    role: "Fonoaudióloga · Niños y adultos",
     bio: "Especialista en deterioro cognitivo, con postgrado en neurorehabilitación y en lactancia materna-frenillo lingual.",
     image: "/images/foto-bar-clinico.png",
     imagePosition: "object-top",
@@ -69,7 +68,7 @@ export function AboutSection() {
           >
             <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">Quiénes somos</p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance">
-              Más de 10 años entregando nuestro servicio a la comunidad.
+              Dos profesionales, un mismo compromiso con tu bienestar.
             </h2>
           </motion.div>
 
@@ -82,25 +81,24 @@ export function AboutSection() {
             className="flex flex-col justify-end gap-10"
           >
             <div className="flex flex-col gap-6 max-w-lg">
-              <p className="text-sm leading-[1.75] text-background/55">
+              <p className="text-base leading-[1.7] text-background/80">
                 Nacimos porque la comunidad de Iquique necesitaba un tratamiento cercano, real y sin
                 vueltas. Hoy somos un centro que combina kinesiología respiratoria y maxilofacial con
                 fonoaudiología — trabajando juntos para que tu recuperación no dependa de coordinar
                 profesionales sueltos.
               </p>
-              <p className="text-sm leading-[1.75] text-background/55">
-                Llevamos entre 8 y 10 años trabajando en la ciudad de Iquique, además de comunas
-                aledañas.
+              <p className="text-base leading-[1.7] text-background/80">
+                Atendemos en Iquique y Alto Hospicio, en consulta, a domicilio y online según cada caso.
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 md:gap-8 pt-10 border-t border-background/10">
+            <div className="grid grid-cols-2 gap-6 md:gap-8 pt-10 border-t border-background/20">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p className={`text-3xl md:text-4xl font-extralight tracking-tight ${stat.color}`}>
                     {stat.value}
                   </p>
-                  <p className="text-[11px] tracking-[0.1em] uppercase text-background/35 mt-2">
+                  <p className="text-xs tracking-[0.08em] uppercase text-background/75 mt-2">
                     {stat.label}
                   </p>
                 </div>

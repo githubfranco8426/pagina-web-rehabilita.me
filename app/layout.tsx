@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
   title: 'rehabilita.me · Kinesiología respiratoria y fonoaudiología en Iquique',
   description:
-    'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en consulta, a domicilio y online. Agenda tu hora por WhatsApp.',
+    'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en consulta, a domicilio y online. Agenda tu hora en línea.',
   alternates: {
     canonical: '/',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0d0d0d',
+  themeColor: '#1b365d',
 }
 
 // Datos estructurados (Schema.org) para que Google entienda que somos un

@@ -17,26 +17,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 5%;
+    --background: 40 33% 98%;
+    --foreground: 212 48% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 212 48% 19%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 5%;
-    --primary: 0 0% 5%;
+    --primary: 213 47% 27%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 94%;
     --secondary-foreground: 0 0% 5%;
     --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 215 16% 38%;
     --accent: 0 0% 94%;
     --accent-foreground: 0 0% 5%;
     --destructive: 0 0% 30%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 0 0% 5%;
-    --radius: 0rem;
+    --ring: 213 47% 27%;
+    --radius: 0.75rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 15%;
     --sidebar-primary: 0 0% 5%;
@@ -54,12 +54,17 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
   body {
     @apply bg-background text-foreground;
   }
   ::selection {
-    background-color: hsl(0 0% 5%);
+    background-color: hsl(213 47% 27%);
     color: hsl(0 0% 100%);
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

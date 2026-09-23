@@ -8,8 +8,8 @@ export const brand = {
     whatsappConsultas: "56937381137",
     whatsappConsultasDisplay: "+56 9 3738 1137",
     whatsappMessageDefault: "Hola, quiero agendar una hora en rehabilita.me",
-    instagramUrl: "https://www.instagram.com/rehabilita.meiqq/",
-    instagramHandle: "@rehabilita.meiqq",
+    instagramUrl: "https://www.instagram.com/rehabilitamechile/",
+    instagramHandle: "@rehabilitamechile",
     address: "José Fco. Vergara #3391, oficina 202, Iquique",
     addressNote: "Atención a domicilio en Iquique y Alto Hospicio",
     city: "Iquique, Chile",
@@ -30,8 +30,7 @@ export const reservaOnlineUrl = "https://beta-sacmed.novacaribe.com/ReservaOnlin
 
 // App-Centro-Rehabilitame — app de reservas propia (Next.js + Supabase).
 // Actualiza NEXT_PUBLIC_BOOKING_APP_URL en .env.local cuando esté desplegada.
-export const bookingAppUrl = process.env.NEXT_PUBLIC_BOOKING_APP_URL || "http://localhost:3001"
+export const bookingAppUrl = process.env.NEXT_PUBLIC_BOOKING_APP_URL || "https://app-centro-rehabilitame.vercel.app"
 
-// Apunta al inicio de la app (elegir especialidad/profesional) en vez de
-// saltar directo a la lista de servicios en /reservar.
-export const bookingAppReservarUrl = bookingAppUrl
+// Lleva a la elección de reserva sin la portada intermedia de la app.
+export const bookingAppReservarUrl = `${bookingAppUrl.replace(/\/$/, "")}/reservar`
