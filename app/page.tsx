@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { Marquee } from "@/components/marquee"
 import { AboutSection } from "@/components/about-section"
 import { ServicesSection } from "@/components/services-section"
+import { ServiceFinder } from "@/components/service-finder"
 import { EditorialBreak } from "@/components/editorial-break"
 import { ApproachSection } from "@/components/approach-section"
 import { CasesSection } from "@/components/cases-section"
@@ -19,6 +20,7 @@ export default function Page() {
         <Navigation />
         <Hero />
         <Marquee />
+        <ServiceFinder />
         <ServicesSection />
         <AboutSection />
         <EditorialBreak />

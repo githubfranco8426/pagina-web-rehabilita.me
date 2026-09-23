@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic"
 import { motion } from "framer-motion"
-import { ArrowRight, Building2, Home, Video } from "lucide-react"
+import { ArrowRight, Building2, Home, MapPin, Video } from "lucide-react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { bookingAppReservarUrl, brand } from "@/lib/brand"
 import { fadeInUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/motion"
@@ -77,6 +78,9 @@ function ModalityCard({ modality }: { modality: (typeof modalities)[number] }) {
 }
 
 export function ApproachSection() {
+  const [mapVisible, setMapVisible] = useState(false)
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.contact.address)}`
+
   return (
     <section id="approach" className="px-6 py-28 md:px-12 lg:px-20 md:py-36">
       <motion.div
@@ -120,18 +124,28 @@ export function ApproachSection() {
             <div className="w-8 h-px mb-5 bg-sky-500" />
             <p className="text-sm leading-[1.75] text-muted-foreground max-w-sm">{brand.contact.address}</p>
             <p className="text-sm leading-[1.75] text-muted-foreground max-w-sm mt-2">{brand.contact.city}</p>
-            <Button
-              asChild
-              className="mt-6 w-fit rounded-full bg-sky-500 text-white px-6 h-11 font-medium hover:bg-sky-600 transition-colors"
-            >
-              <a href={bookingAppReservarUrl} target="_blank" rel="noopener">
-                Agendar hora
-                <ArrowRight className="size-4" />
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button asChild className="w-fit rounded-full bg-sky-500 text-white px-6 h-11 font-medium hover:bg-sky-600 transition-colors">
+                <a href={bookingAppReservarUrl} target="_blank" rel="noopener">Agendar hora <ArrowRight className="size-4" /></a>
+              </Button>
+              <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 items-center gap-2 rounded-full border border-sky-700/20 px-5 text-sm font-medium text-sky-800 transition hover:bg-sky-50">
+                <MapPin className="size-4" /> Cómo llegar
               </a>
-            </Button>
+            </div>
           </div>
-          <div className="aspect-[4/3] min-h-[320px] bg-background">
-            <ClinicMap />
+          <div className="relative aspect-[4/3] min-h-[320px] bg-sky-50">
+            {mapVisible ? (
+              <ClinicMap />
+            ) : (
+              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
+                <MapPin className="size-8 text-sky-700" aria-hidden="true" />
+                <p className="mt-4 font-medium text-foreground">Consulta presencial en Iquique</p>
+                <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">Activa el mapa interactivo sólo si necesitas explorar la ubicación.</p>
+                <button type="button" onClick={() => setMapVisible(true)} className="mt-5 rounded-full bg-sky-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700 focus-visible:ring-offset-2">
+                  Ver mapa interactivo
+                </button>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>

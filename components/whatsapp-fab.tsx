@@ -8,14 +8,26 @@ import { WhatsappIcon } from "@/components/whatsapp-icon"
 
 export function WhatsappFab() {
   const [visible, setVisible] = useState(false)
+  const [message, setMessage] = useState<string | undefined>()
 
   useEffect(() => {
     const hero = document.querySelector("section")
     const threshold = hero ? hero.getBoundingClientRect().height * 0.6 : 400
     const onScroll = () => setVisible(window.scrollY > threshold)
+    const timer = window.setTimeout(() => setVisible(true), 12000)
+    const onServiceSelected = (event: Event) => {
+      const detail = (event as CustomEvent<{ message?: string }>).detail
+      setMessage(detail?.message)
+      setVisible(true)
+    }
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
+    window.addEventListener("rehabilitame:service-selected", onServiceSelected)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener("scroll", onScroll)
+      window.removeEventListener("rehabilitame:service-selected", onServiceSelected)
+    }
   }, [])
 
   return (
@@ -28,14 +40,15 @@ export function WhatsappFab() {
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
-          href={whatsappConsultasLink()}
+          href={whatsappConsultasLink(message)}
           target="_blank"
           rel="noopener"
-          onClick={() => trackWhatsappClick("fab")}
-          aria-label="Agendar por WhatsApp"
-          className="fixed bottom-6 right-6 z-40 h-14 w-14 flex items-center justify-center bg-foreground text-background shadow-lg hover:bg-foreground/90"
+          onClick={() => trackWhatsappClick(message ? "fab_contextual" : "fab")}
+          aria-label="Escríbenos por WhatsApp"
+          className="fixed bottom-5 right-5 z-40 inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#25D366] px-4 text-white shadow-lg transition-colors hover:bg-[#1ebe57] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 md:bottom-6 md:right-6"
         >
           <WhatsappIcon className="h-6 w-6" />
+          <span className="hidden text-sm font-medium sm:inline">¿Tienes dudas?</span>
         </motion.a>
       )}
     </AnimatePresence>

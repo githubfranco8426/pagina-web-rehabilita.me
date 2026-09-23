@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { brand, whatsappConsultasLink } from "@/lib/brand"
-import { trackWhatsappClick } from "@/lib/analytics"
+import { trackEngagement, trackWhatsappClick } from "@/lib/analytics"
 import { fadeInUp, viewportOnce } from "@/lib/motion"
 import { WhatsappIcon } from "@/components/whatsapp-icon"
 
@@ -42,6 +42,16 @@ const faqs = [
     question: "¿Qué medios de pago aceptan?",
     answer:
       "Aceptamos efectivo y transferencia. Emitimos boleta de honorarios, que puedes presentar a tu Isapre para reembolso según tu plan. Coordina el detalle directamente con nosotros al momento de confirmar tu hora.",
+  },
+  {
+    question: "¿Qué debo llevar a mi primera evaluación?",
+    answer:
+      "Trae tus exámenes, indicaciones médicas o antecedentes que tengas disponibles. Si no cuentas con ellos, igual podemos realizar una evaluación inicial y orientarte.",
+  },
+  {
+    question: "¿Trabajan junto a mi odontólogo en casos maxilofaciales?",
+    answer:
+      "Sí. Cuando el caso lo requiere, coordinamos el trabajo con tu odontólogo para que la rehabilitación sea coherente con tu tratamiento dental o maxilofacial.",
   },
 ]
 
@@ -87,7 +97,7 @@ export function FaqSection() {
           variants={fadeInUp}
           transition={{ delay: 0.15 }}
         >
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full" onValueChange={(value) => value && trackEngagement("faq_opened", { question: value })}>
             {faqs.map((faq) => (
               <AccordionItem key={faq.question} value={faq.question} className="border-background/15">
                 <AccordionTrigger className="text-left text-sm md:text-base font-light text-background hover:no-underline [&>svg]:text-background/40">

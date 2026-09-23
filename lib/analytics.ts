@@ -13,6 +13,11 @@ function trackEvent(eventName: string, params?: Record<string, unknown>) {
   window.gtag("event", eventName, params)
 }
 
+/** Eventos de interacción que ayudan a entender qué necesidad trae a cada persona al sitio. */
+export function trackEngagement(eventName: string, params?: Record<string, unknown>) {
+  trackEvent(eventName, params)
+}
+
 /** Dispara cuando alguien hace clic en cualquier botón "Agendar hora". */
 export function trackBookingClick(source: string) {
   trackEvent("agendar_click", { source })
