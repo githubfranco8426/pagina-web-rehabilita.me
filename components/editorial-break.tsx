@@ -1,32 +1,23 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 import { fadeInUp, viewportOnce } from "@/lib/motion"
 
 export function EditorialBreak() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  })
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"])
-
   return (
-    <section ref={sectionRef} className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
+    <section className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={fadeInUp}
-          className="lg:col-span-7 overflow-hidden"
+          className="lg:col-span-7 aspect-[16/10] overflow-hidden bg-[#eefafa]"
         >
           <motion.img
-            style={{ y: imageY }}
             src="/images/cuida-como-respiras.jpg"
             alt="Ilustración infantil que muestra el movimiento de las costillas y el flujo del aire al respirar"
-            className="w-full aspect-[3/4] object-cover"
+            className="h-full w-full object-contain"
           />
         </motion.div>
         <motion.div
