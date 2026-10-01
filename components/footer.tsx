@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { brand, whatsappConsultasLink } from "@/lib/brand"
 import { trackWhatsappClick } from "@/lib/analytics"
@@ -28,14 +29,14 @@ export function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-20">
         <div className="md:col-span-5">
           <Link href="/" className="flex items-center gap-2.5">
-            <img
-              src="/images/logo-pagina.png"
+            <Image
+              src="/images/logo-rehabilitame-v2.webp"
               alt="Rehabilitame"
-              className="h-9 w-9 rounded-full object-cover shrink-0"
+              width={210}
+              height={140}
+              sizes="210px"
+              className="h-[140px] w-[210px] object-contain shrink-0"
             />
-            <span className="text-xs font-medium tracking-[0.3em] uppercase text-foreground">
-              Rehabilitame
-            </span>
           </Link>
           <p className="text-sm leading-[1.75] text-muted-foreground mt-5 max-w-xs">
             Rehabilitación especializada en tu hogar. Kinesiología y Fonoaudiología en Iquique y Alto Hospicio.

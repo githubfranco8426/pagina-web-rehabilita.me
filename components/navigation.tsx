@@ -25,10 +25,9 @@ export function Navigation() {
       >
         Saltar al contenido
       </a>
-      <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-4 px-5 md:px-8" aria-label="Navegación principal">
+      <nav className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-4 px-5 md:px-8" aria-label="Navegación principal">
         <Link href="/" aria-label="Rehabilitame, inicio" className="inline-flex min-h-11 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600" onClick={() => setMenuOpen(false)}>
-          <Image src="/images/logo-pagina.png" alt="" width={42} height={42} className="size-10 rounded-full object-cover" priority />
-          <span className="hidden text-lg font-semibold tracking-[-0.04em] text-sky-800 sm:inline">Rehabilitame</span>
+          <Image src="/images/logo-rehabilitame-v2.webp" alt="Rehabilitame" width={120} height={80} sizes="120px" className="h-20 w-[120px] shrink-0 object-contain" priority />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

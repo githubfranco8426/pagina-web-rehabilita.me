@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: '/images/logo-oficial.jpg',
+    icon: '/images/logo-rehabilitame-v2.png',
   },
   openGraph: {
     title: 'Rehabilitación especializada en tu hogar | Rehabilitame',
@@ -46,7 +46,8 @@ const structuredData = {
   description:
     'Rehabilitación especializada a domicilio en Iquique y Alto Hospicio. Kinesiología y Fonoaudiología, con atención en consulta y online según el caso.',
   url: 'https://rehabilitame.cl',
-  image: 'https://rehabilitame.cl/images/logo-oficial.jpg',
+  image: 'https://rehabilitame.cl/images/logo-rehabilitame-v2.png',
+  logo: 'https://rehabilitame.cl/images/logo-rehabilitame-v2.png',
   telephone: `+${brand.contact.whatsappConsultas}`,
   address: {
     '@type': 'PostalAddress',
