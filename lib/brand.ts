@@ -1,19 +1,25 @@
 export const brand = {
   name: "rehabilita.me",
   legalName: "Althia Med · Kinesiología y Fonoaudiología",
-  tagline: "Kinesiología respiratoria y fonoaudiología en Iquique",
+  tagline: "Rehabilitación especializada en tu hogar",
   contact: {
     whatsapp: "56930286388",
     whatsappDisplay: "+56 9 3028 6388",
     whatsappConsultas: "56937381137",
     whatsappConsultasDisplay: "+56 9 3738 1137",
-    whatsappMessageDefault: "Hola, quiero agendar una hora en rehabilita.me",
+    whatsappMessageDefault: "Hola, quiero orientación para una evaluación de rehabilitación a domicilio en Iquique o Alto Hospicio.",
     instagramUrl: "https://www.instagram.com/rehabilitamechile/",
     instagramHandle: "@rehabilitamechile",
     address: "José Fco. Vergara #3391, oficina 202, Iquique",
     addressNote: "Atención a domicilio en Iquique y Alto Hospicio",
     city: "Iquique, Chile",
   },
+}
+
+export function rehabilitationMessage(service: string) {
+  const topic = service.toLocaleLowerCase("es-CL")
+  const modality = topic.includes("domicilio") ? "" : " a domicilio"
+  return `Hola, quisiera orientación sobre ${topic}${modality} en Iquique o Alto Hospicio. ¿Cómo puedo coordinar una evaluación?`
 }
 
 export function whatsappLink(customMessage?: string) {

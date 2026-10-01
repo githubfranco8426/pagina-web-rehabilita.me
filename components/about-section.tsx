@@ -46,7 +46,7 @@ function TeamCard({ person }: { person: (typeof team)[0] }) {
         <h3 className="text-lg md:text-xl font-light tracking-tight text-foreground mb-1.5">
           {person.name}
         </h3>
-        <p className={`text-[11px] tracking-[0.1em] uppercase mb-4 ${person.color}`}>
+        <p className={`text-sm tracking-[0.05em] uppercase mb-4 ${person.color}`}>
           {person.role}
         </p>
         <p className="text-sm leading-[1.7] text-muted-foreground">{person.bio}</p>
@@ -68,7 +68,7 @@ export function AboutSection() {
           >
             <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">Quiénes somos</p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance">
-              Dos profesionales, un mismo compromiso con tu bienestar.
+              Un equipo que conversa entre sí.
             </h2>
           </motion.div>
 
@@ -82,13 +82,14 @@ export function AboutSection() {
           >
             <div className="flex flex-col gap-6 max-w-lg">
               <p className="text-base leading-[1.7] text-background/80">
-                Nacimos porque la comunidad de Iquique necesitaba un tratamiento cercano, real y sin
-                vueltas. Hoy somos un centro que combina kinesiología respiratoria y maxilofacial con
-                fonoaudiología — trabajando juntos para que tu recuperación no dependa de coordinar
-                profesionales sueltos.
+                Cada persona tiene necesidades distintas. Coordinamos Kinesiología y
+                Fonoaudiología con objetivos compartidos cuando el caso lo requiere, considerando
+                la movilidad, la respiración, la comunicación y la alimentación.
               </p>
               <p className="text-base leading-[1.7] text-background/80">
-                Atendemos en Iquique y Alto Hospicio, en consulta, a domicilio y online según cada caso.
+                Trabajamos con la persona y su familia en Iquique y Alto Hospicio.
+                Si necesitas apoyo de Terapia Ocupacional para las actividades diarias o adaptar
+                el hogar, consúltanos para evaluar la coordinación con tu equipo tratante.
               </p>
             </div>
 

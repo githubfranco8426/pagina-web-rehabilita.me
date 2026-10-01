@@ -1,9 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowRight, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 import { bookingAppReservarUrl } from "@/lib/brand"
 import { trackBookingClick } from "@/lib/analytics"
+import { ContextualCta } from "@/components/contextual-cta"
 
 export function Hero() {
   return (
@@ -12,33 +13,30 @@ export function Hero() {
         <div className="max-w-2xl">
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-700/15 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-800">
             <MapPin className="size-4" aria-hidden="true" />
-            Atención en Iquique y Alto Hospicio
+            Domicilios en Iquique y Alto Hospicio
           </p>
           <h1 className="max-w-[13ch] text-balance text-[clamp(2.65rem,5vw,4.65rem)] font-semibold leading-[1.06] tracking-[-0.055em] text-sky-900">
-            Recuperarte es más fácil cuando te acompañan.
+            Rehabilitación especializada en tu hogar.
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-foreground/80 md:text-xl">
-            Kinesiología respiratoria, maxilofacial y fonoaudiología para ti y tu familia.
-            Te atendemos en consulta, a domicilio y online.
+            Después de una hospitalización, un ACV o una enfermedad respiratoria,
+            te acompañamos a recuperar movilidad y autonomía. Coordinamos Kinesiología
+            y Fonoaudiología según tus necesidades y las de tu familia.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-9">
+            <ContextualCta source="hero" />
+          </div>
+          <div className="mt-5">
             <a
               href={bookingAppReservarUrl}
               onClick={() => trackBookingClick("hero")}
-              className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-sky-700 px-7 text-base font-semibold text-white transition-colors hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2"
+              className="inline-flex min-h-11 items-center text-sm font-medium text-sky-800 underline underline-offset-4"
             >
-              Agendar una hora
-              <ArrowRight className="size-5" aria-hidden="true" />
-            </a>
-            <a
-              href="#servicios"
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-sky-800/25 bg-white/80 px-7 text-base font-semibold text-sky-800 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2"
-            >
-              Ver servicios
+              También atendemos en consulta y online
             </a>
           </div>
           <p className="mt-8 text-sm font-medium leading-relaxed text-foreground/65">
-            Respiratorio infantil y adulto <span aria-hidden="true">·</span> Maxilofacial <span aria-hidden="true">·</span> Fonoaudiología
+            Post UCI y post hospitalización <span aria-hidden="true">·</span> Neurológica <span aria-hidden="true">·</span> Respiratoria <span aria-hidden="true">·</span> Funcional
           </p>
         </div>
 

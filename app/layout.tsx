@@ -11,9 +11,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
-  title: 'rehabilita.me · Kinesiología respiratoria y fonoaudiología en Iquique',
+  title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | rehabilita.me',
   description:
-    'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en consulta, a domicilio y online. Agenda tu hora en línea.',
+    'Rehabilitación especializada en tu hogar en Iquique y Alto Hospicio. Kinesiología y Fonoaudiología para recuperación post hospitalización, neurológica y respiratoria.',
   alternates: {
     canonical: '/',
   },
@@ -21,9 +21,11 @@ export const metadata: Metadata = {
     icon: '/images/logo-oficial.jpg',
   },
   openGraph: {
-    title: 'rehabilita.me · Kinesiología y fonoaudiología en Iquique',
-    description: 'Cuidamos cómo respiras y cómo te comunicas. Atención en consulta, a domicilio y online.',
-    images: ['/images/logo-oficial.jpg'],
+    title: 'Rehabilitación especializada en tu hogar | rehabilita.me',
+    description: 'Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio. Cuéntanos tu caso y te orientamos.',
+    images: [{ url: '/images/domicilio-paciente.webp', alt: 'Atención de rehabilitación en el hogar' }],
+    locale: 'es_CL',
+    url: '/',
     type: 'website',
   },
 }
@@ -38,10 +40,11 @@ export const viewport: Viewport = {
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
+  '@id': 'https://rehabilitame.cl/#centro',
   name: brand.name,
   legalName: brand.legalName,
   description:
-    'Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique. Atención en consulta, a domicilio y online.',
+    'Rehabilitación especializada a domicilio en Iquique y Alto Hospicio. Kinesiología y Fonoaudiología, con atención en consulta y online según el caso.',
   url: 'https://rehabilitame.cl',
   image: 'https://rehabilitame.cl/images/logo-oficial.jpg',
   telephone: `+${brand.contact.whatsappConsultas}`,

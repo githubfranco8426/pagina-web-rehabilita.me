@@ -1,4 +1,4 @@
-const items = ["Atención en consulta", "Domicilio", "Online", "Iquique y Alto Hospicio"]
+const items = ["Rehabilitación en tu hogar", "Post hospitalización", "Iquique y Alto Hospicio", "Kinesiología y Fonoaudiología"]
 
 export function Marquee() {
   const track = (
@@ -18,7 +18,7 @@ export function Marquee() {
     <div className="bg-background border-y border-border py-5 overflow-hidden">
       <div className="flex w-max animate-marquee">
         {track}
-        {track}
+        <div aria-hidden="true">{track}</div>
       </div>
     </div>
   )

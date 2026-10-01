@@ -12,25 +12,28 @@ import { FaqSection } from "@/components/faq-section"
 import { BookingWidgetSection } from "@/components/booking-widget-section"
 import { Footer } from "@/components/footer"
 import { WhatsappFab } from "@/components/whatsapp-fab"
+import { RehabilitationPaths, EvaluationSteps } from "@/components/rehabilitation-sections"
 
 export default function Page() {
   return (
     <>
+      <Navigation />
       <main>
-        <Navigation />
         <Hero />
         <Marquee />
+        <RehabilitationPaths />
         <ServiceFinder />
-        <ServicesSection />
         <AboutSection />
+        <EvaluationSteps />
+        <ServicesSection />
         <EditorialBreak />
         <CasesSection />
         <ApproachSection />
         <JournalSection />
         <FaqSection />
         <BookingWidgetSection />
-        <Footer />
       </main>
+      <Footer />
       <WhatsappFab />
     </>
   )

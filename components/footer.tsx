@@ -7,10 +7,11 @@ import { trackWhatsappClick } from "@/lib/analytics"
 import { fadeIn, viewportOnce } from "@/lib/motion"
 
 const footerLinks = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Sobre nosotros", href: "#nosotros" },
-  { label: "Casos reales", href: "#casos" },
-  { label: "Preguntas frecuentes", href: "#faq" },
+  { label: "Rehabilitación a domicilio", href: "/rehabilitacion-domiciliaria" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Sobre nosotros", href: "/#nosotros" },
+  { label: "Recursos", href: "/recursos" },
+  { label: "Preguntas frecuentes", href: "/#faq" },
 ]
 
 export function Footer() {
@@ -37,7 +38,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="text-sm leading-[1.75] text-muted-foreground mt-5 max-w-xs">
-            Kinesiología respiratoria, maxilofacial y fonoaudiología en Iquique.
+            Rehabilitación especializada en tu hogar. Kinesiología y Fonoaudiología en Iquique y Alto Hospicio.
           </p>
         </div>
 

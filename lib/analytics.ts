@@ -19,11 +19,11 @@ export function trackEngagement(eventName: string, params?: Record<string, unkno
 }
 
 /** Dispara cuando alguien hace clic en cualquier botón "Agendar hora". */
-export function trackBookingClick(source: string) {
-  trackEvent("agendar_click", { source })
+export function trackBookingClick(source: string, service?: string) {
+  trackEvent("agendar_click", { source, ...(service ? { service } : {}), page_path: window.location.pathname })
 }
 
 /** Dispara cuando alguien hace clic en cualquier link de WhatsApp. */
-export function trackWhatsappClick(source: string) {
-  trackEvent("whatsapp_click", { source })
+export function trackWhatsappClick(source: string, service?: string) {
+  trackEvent("whatsapp_click", { source, ...(service ? { service } : {}), page_path: window.location.pathname })
 }

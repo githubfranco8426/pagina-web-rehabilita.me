@@ -133,7 +133,7 @@ export function ApproachSection() {
               </a>
             </div>
           </div>
-          <div className="relative aspect-[4/3] min-h-[320px] bg-sky-50">
+          <div className="relative h-[320px] w-full min-w-0 bg-sky-50 lg:h-[420px]">
             {mapVisible ? (
               <ClinicMap />
             ) : (

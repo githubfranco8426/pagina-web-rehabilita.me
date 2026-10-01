@@ -1,5 +1,6 @@
 import { ArrowUpRight, HeartHandshake, MessageCircle, Wind } from "lucide-react"
 import { brand } from "@/lib/brand"
+import Link from "next/link"
 
 const topics = [
   {
@@ -33,7 +34,7 @@ export function JournalSection() {
               Respuestas claras para cuidar mejor.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-foreground/75">
-              Compartimos información útil sobre kinesiología respiratoria, rehabilitación y fonoaudiología.
+              Orientación para acompañar la recuperación en casa, después del alta o ante dificultades de comunicación y alimentación.
             </p>
           </div>
           <a
@@ -46,6 +47,8 @@ export function JournalSection() {
             <ArrowUpRight className="size-5" aria-hidden="true" />
           </a>
         </div>
+
+        <Link href="/recursos" className="mt-7 inline-flex min-h-11 items-center font-semibold text-sky-800 underline underline-offset-4">Leer nuestras guías para familias</Link>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {topics.map((topic) => (

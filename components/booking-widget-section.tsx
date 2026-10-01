@@ -21,7 +21,7 @@ export function BookingWidgetSection() {
             onClick={() => trackBookingClick("final_cta")}
             className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-white px-7 font-semibold text-sky-900 transition-colors hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-sky-900"
           >
-            Agendar una hora
+            Agendar evaluación
             <ArrowRight className="size-5" aria-hidden="true" />
           </a>
           <a

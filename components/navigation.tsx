@@ -8,10 +8,10 @@ import { bookingAppReservarUrl } from "@/lib/brand"
 import { trackBookingClick } from "@/lib/analytics"
 
 const links = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Casos reales", href: "#casos" },
-  { label: "Preguntas frecuentes", href: "#faq" },
+  { label: "A domicilio", href: "/rehabilitacion-domiciliaria" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Equipo", href: "/#nosotros" },
+  { label: "Recursos", href: "/recursos" },
 ]
 
 export function Navigation() {
@@ -45,7 +45,7 @@ export function Navigation() {
             onClick={() => trackBookingClick("nav")}
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-sky-700 px-3 text-sm font-semibold text-white transition-colors hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2 sm:px-4 md:px-6"
           >
-            <span className="sm:hidden">Agendar</span><span className="hidden sm:inline">Agendar hora</span>
+            <span className="sm:hidden">Agendar</span><span className="hidden sm:inline">Agendar evaluación</span>
           </a>
           <button
             type="button"

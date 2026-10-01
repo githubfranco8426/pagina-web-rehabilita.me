@@ -5,9 +5,12 @@ import { ArrowRight, Baby, Brain, ChevronLeft, HeartPulse, Stethoscope, Wind } f
 import { bookingAppReservarUrl, whatsappConsultasLink } from "@/lib/brand"
 import { trackBookingClick, trackEngagement, trackWhatsappClick } from "@/lib/analytics"
 
-type Need = "respiracion" | "lactancia" | "habla" | "maxilofacial" | "deglucion"
+type Need = "postalta" | "neuro" | "autonomia" | "respiracion" | "lactancia" | "habla" | "maxilofacial" | "deglucion"
 
 const needs: { id: Need; label: string; description: string; icon: typeof Wind }[] = [
+  { id: "postalta", label: "Después de una hospitalización", description: "Volver a casa después de una estadía en UCI o un alta hospitalaria", icon: HeartPulse },
+  { id: "neuro", label: "ACV o condición neurológica", description: "Movimiento, comunicación y actividades cotidianas", icon: Brain },
+  { id: "autonomia", label: "Pérdida de autonomía", description: "Levantarse, caminar o realizar actividades en casa", icon: HeartPulse },
   { id: "respiracion", label: "Respiración", description: "Tos, flemas, falta de aire o recuperación post alta", icon: Wind },
   { id: "lactancia", label: "Lactancia o frenillo", description: "Succión, agarre, dolor o dudas en los primeros meses", icon: Baby },
   { id: "habla", label: "Habla o comunicación", description: "Voz, lenguaje o comunicación después de una condición neurológica", icon: Brain },
@@ -16,6 +19,24 @@ const needs: { id: Need; label: string; description: string; icon: typeof Wind }
 ]
 
 const recommendations: Record<Need, { title: string; copy: string; message: string; accent: string }> = {
+  postalta: {
+    title: "Rehabilitación post hospitalización",
+    copy: "Evaluamos fuerza, movilidad, respiración y las necesidades de comunicación o deglución para orientar la recuperación en casa.",
+    message: "Hola, quisiera coordinar una evaluación de rehabilitación después de una hospitalización.",
+    accent: "text-sky-800 bg-sky-50 border-sky-200",
+  },
+  neuro: {
+    title: "Rehabilitación neurológica en casa",
+    copy: "Cuéntanos qué actividades le cuestan a tu familiar. Evaluamos el caso para definir objetivos y las disciplinas pertinentes.",
+    message: "Hola, necesito orientación sobre rehabilitación neurológica a domicilio.",
+    accent: "text-sky-800 bg-sky-50 border-sky-200",
+  },
+  autonomia: {
+    title: "Recuperación funcional en el hogar",
+    copy: "Orientamos la evaluación de movilidad y actividades cotidianas. Si se requiere Terapia Ocupacional, conversamos sobre su coordinación con el equipo tratante.",
+    message: "Hola, necesito orientación para recuperar movilidad y autonomía en casa.",
+    accent: "text-sky-800 bg-sky-50 border-sky-200",
+  },
   respiracion: {
     title: "Kinesiología respiratoria",
     copy: "Evaluamos el caso y te orientamos sobre la atención más adecuada, en consulta o domicilio.",
@@ -56,7 +77,7 @@ export function ServiceFinder() {
     setSelectedNeed(need)
     const recommendation = recommendations[need]
     window.dispatchEvent(new CustomEvent("rehabilitame:service-selected", { detail: { message: recommendation.message } }))
-    trackEngagement("service_finder_answered", { need })
+    trackEngagement("service_path_selected", { path: need })
   }
 
   return (
@@ -91,13 +112,13 @@ export function ServiceFinder() {
             })}
           </div>
         ) : (
-          <div className={`mt-8 rounded-2xl border p-6 md:flex md:items-center md:justify-between md:gap-8 ${result.accent}`}>
+          <div aria-live="polite" className={`mt-8 rounded-2xl border p-6 lg:flex lg:items-center lg:justify-between lg:gap-8 ${result.accent}`}>
             <div className="max-w-xl">
               <p className="text-xs font-medium uppercase tracking-[0.16em] opacity-70">Te recomendamos</p>
               <h3 className="mt-2 text-2xl font-medium tracking-tight">{result.title}</h3>
               <p className="mt-2 text-sm leading-relaxed opacity-80">{result.copy}</p>
             </div>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row md:mt-0">
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:mt-0">
               <a href={bookingAppReservarUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick(`finder_${selectedNeed}`)} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-sky-700 px-5 text-sm font-medium text-white transition hover:bg-sky-800">
                 Agendar evaluación <ArrowRight className="size-4" aria-hidden="true" />
               </a>

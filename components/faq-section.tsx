@@ -9,6 +9,14 @@ import { WhatsappIcon } from "@/components/whatsapp-icon"
 
 const faqs = [
   {
+    question: "¿Pueden orientarme después de una hospitalización o un ACV?",
+    answer: "Sí. Cuéntanos qué dificultades presenta la persona y te orientamos sobre la evaluación pertinente. Consideramos las indicaciones del equipo tratante y coordinamos Kinesiología y Fonoaudiología cuando el caso lo requiere.",
+  },
+  {
+    question: "¿Todos los pacientes necesitan varias disciplinas?",
+    answer: "No. La evaluación permite definir qué atención corresponde. Si se requiere apoyo de Terapia Ocupacional u otra disciplina, conversamos sobre la coordinación con el equipo tratante.",
+  },
+  {
     question: "¿Necesito una derivación médica para agendar hora?",
     answer:
       "No es obligatorio. Puedes agendar directamente con nosotros y, en la primera sesión, evaluamos tu caso para definir el mejor plan de tratamiento.",
