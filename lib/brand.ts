@@ -1,7 +1,7 @@
 export const brand = {
   name: "Rehabilitame",
   legalName: "Althia Med · Kinesiología y Fonoaudiología",
-  tagline: "Rehabilitación especializada en tu hogar",
+  tagline: "Kinesiología y Fonoaudiología coordinadas para acompañarte en casa",
   contact: {
     whatsapp: "56930286388",
     whatsappDisplay: "+56 9 3028 6388",

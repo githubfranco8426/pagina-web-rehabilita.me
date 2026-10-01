@@ -68,7 +68,7 @@ export function AboutSection() {
           >
             <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">Quiénes somos</p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance">
-              Un equipo que conversa entre sí.
+              Dos profesionales, objetivos compartidos.
             </h2>
           </motion.div>
 
@@ -82,9 +82,9 @@ export function AboutSection() {
           >
             <div className="flex flex-col gap-6 max-w-lg">
               <p className="text-base leading-[1.7] text-background/80">
-                Cada persona tiene necesidades distintas. Coordinamos Kinesiología y
-                Fonoaudiología con objetivos compartidos cuando el caso lo requiere, considerando
-                la movilidad, la respiración, la comunicación y la alimentación.
+                Nuestro equipo reúne Kinesiología y Fonoaudiología. Cuando el caso lo necesita,
+                trabajamos con objetivos compartidos para acompañar la movilidad, la respiración,
+                la comunicación y la alimentación.
               </p>
               <p className="text-base leading-[1.7] text-background/80">
                 Trabajamos con la persona y su familia en Iquique y Alto Hospicio.

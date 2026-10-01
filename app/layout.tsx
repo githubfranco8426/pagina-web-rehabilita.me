@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
   title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | Rehabilitame',
   description:
-    'Rehabilitación especializada en tu hogar en Iquique y Alto Hospicio. Kinesiología y Fonoaudiología para recuperación post hospitalización, neurológica y respiratoria.',
+    'Equipo de Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio. Atención coordinada para recuperación post hospitalización, neurológica y respiratoria.',
   alternates: {
     canonical: '/',
   },
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     icon: '/images/logo-rehabilitame-v2.png',
   },
   openGraph: {
-    title: 'Rehabilitación especializada en tu hogar | Rehabilitame',
-    description: 'Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio. Cuéntanos tu caso y te orientamos.',
+    title: 'Rehabilitación en equipo a domicilio | Rehabilitame',
+    description: 'Kinesiología y Fonoaudiología trabajan en coordinación para acompañar a personas y familias en Iquique y Alto Hospicio.',
     images: [{ url: '/images/domicilio-paciente-portada.webp', alt: 'Atención de rehabilitación en el hogar' }],
     locale: 'es_CL',
     url: '/',
@@ -44,7 +44,7 @@ const structuredData = {
   name: brand.name,
   legalName: brand.legalName,
   description:
-    'Rehabilitación especializada a domicilio en Iquique y Alto Hospicio. Kinesiología y Fonoaudiología, con atención en consulta y online según el caso.',
+    'Equipo de Kinesiología y Fonoaudiología con objetivos coordinados. Atención en Iquique y Alto Hospicio, a domicilio, en consulta y online según el caso.',
   url: 'https://rehabilitame.cl',
   image: 'https://rehabilitame.cl/images/logo-rehabilitame-v2.png',
   logo: 'https://rehabilitame.cl/images/logo-rehabilitame-v2.png',

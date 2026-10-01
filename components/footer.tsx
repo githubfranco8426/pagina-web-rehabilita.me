@@ -39,7 +39,7 @@ export function Footer() {
             />
           </Link>
           <p className="text-sm leading-[1.75] text-muted-foreground mt-5 max-w-xs">
-            Rehabilitación especializada en tu hogar. Kinesiología y Fonoaudiología en Iquique y Alto Hospicio.
+            Kinesiología y Fonoaudiología coordinadas para acompañarte en Iquique y Alto Hospicio.
           </p>
         </div>
 

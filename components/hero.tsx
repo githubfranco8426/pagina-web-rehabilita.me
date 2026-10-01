@@ -16,12 +16,12 @@ export function Hero() {
             Domicilios en Iquique y Alto Hospicio
           </p>
           <h1 className="max-w-[13ch] text-balance text-[clamp(2.65rem,5vw,4.65rem)] font-semibold leading-[1.06] tracking-[-0.055em] text-sky-900">
-            Rehabilitación especializada en tu hogar.
+            Rehabilitación en equipo, en tu hogar.
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-foreground/80 md:text-xl">
-            Después de una hospitalización, un ACV o una enfermedad respiratoria,
-            te acompañamos a recuperar movilidad y autonomía. Coordinamos Kinesiología
-            y Fonoaudiología según tus necesidades y las de tu familia.
+            Somos un equipo de Kinesiología y Fonoaudiología. Coordinamos objetivos y cuidados
+            para acompañarte a ti y a tu familia, y recuperar movilidad, comunicación y autonomía
+            después de una hospitalización, un ACV o una enfermedad respiratoria.
           </p>
           <div className="mt-9">
             <ContextualCta source="hero" />
@@ -59,8 +59,8 @@ export function Hero() {
             </div>
           </div>
           <div className="absolute -bottom-5 -left-3 rounded-2xl border border-sky-900/10 bg-white px-5 py-4 shadow-xl sm:-left-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">Rehabilitame</p>
-            <p className="mt-1 text-sm font-medium text-sky-900">Un equipo, atención personalizada.</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">Rehabilitame</p>
+              <p className="mt-1 text-sm font-medium text-sky-900">Kinesiología + Fonoaudiología</p>
           </div>
         </div>
       </div>
