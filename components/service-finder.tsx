@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Baby, Brain, ChevronLeft, HeartPulse, Stethoscope, Wind } from "lucide-react"
+import { ArrowRight, Baby, Brain, ChevronLeft, ChevronDown, HeartPulse, Stethoscope, Wind } from "lucide-react"
 import { bookingAppReservarUrl, whatsappConsultasLink } from "@/lib/brand"
 import { trackBookingClick, trackEngagement, trackWhatsappClick } from "@/lib/analytics"
 
@@ -70,6 +70,7 @@ const recommendations: Record<Need, { title: string; copy: string; message: stri
 }
 
 export function ServiceFinder() {
+  const [open, setOpen] = useState(false)
   const [selectedNeed, setSelectedNeed] = useState<Need | null>(null)
   const result = selectedNeed ? recommendations[selectedNeed] : null
 
@@ -81,13 +82,13 @@ export function ServiceFinder() {
   }
 
   return (
-    <section aria-labelledby="service-finder-title" className="px-6 py-20 md:px-12 md:py-24 lg:px-20">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-sky-900/10 bg-white p-6 shadow-sm md:p-10">
+    <div className="mt-6">
+      <button type="button" aria-expanded={open} aria-controls="service-finder-panel" onClick={() => { setOpen(!open); if (!open) trackEngagement("service_finder_opened", { source: "home_services" }) }} className="inline-flex min-h-11 items-center gap-3 rounded-full border border-sky-900/20 bg-white px-5 py-3 text-sm font-semibold text-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700">
+        No sé qué atención necesito <ChevronDown className={`size-4 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+      </button>
+      <div id="service-finder-panel" hidden={!open} className="mt-5 rounded-3xl border border-sky-900/10 bg-white p-6 md:p-8">
         <div className="max-w-2xl">
-          <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-sky-700">Encuentra tu atención</p>
-          <h2 id="service-finder-title" className="mt-3 text-3xl font-light tracking-tight text-foreground md:text-4xl">
-            ¿En qué necesitas ayuda?
-          </h2>
+          <h3 className="text-xl font-semibold tracking-tight text-foreground">Te ayudamos a elegir</h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
             Elige la situación que más se parece a la tuya. Te orientamos en un paso, sin pedir datos personales.
           </p>
@@ -132,6 +133,6 @@ export function ServiceFinder() {
           </div>
         )}
       </div>
-    </section>
+    </div>
   )
 }
