@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic"
 import { motion } from "framer-motion"
 import { ArrowRight, Building2, Home, MapPin, Video } from "lucide-react"
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { bookingAppReservarUrl, brand } from "@/lib/brand"
 import { fadeInUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/motion"
@@ -78,7 +77,6 @@ function ModalityCard({ modality }: { modality: (typeof modalities)[number] }) {
 }
 
 export function ApproachSection() {
-  const [mapVisible, setMapVisible] = useState(false)
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.contact.address)}`
 
   return (
@@ -134,18 +132,7 @@ export function ApproachSection() {
             </div>
           </div>
           <div className="relative h-[320px] w-full min-w-0 bg-sky-50 lg:h-[420px]">
-            {mapVisible ? (
-              <ClinicMap />
-            ) : (
-              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
-                <MapPin className="size-8 text-sky-700" aria-hidden="true" />
-                <p className="mt-4 font-medium text-foreground">Consulta presencial en Iquique</p>
-                <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">Activa el mapa interactivo sólo si necesitas explorar la ubicación.</p>
-                <button type="button" onClick={() => setMapVisible(true)} className="mt-5 rounded-full bg-sky-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700 focus-visible:ring-offset-2">
-                  Ver mapa interactivo
-                </button>
-              </div>
-            )}
+            <ClinicMap />
           </div>
         </motion.div>
       </div>
