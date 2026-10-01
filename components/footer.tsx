@@ -30,11 +30,11 @@ export function Footer() {
           <Link href="/" className="flex items-center gap-2.5">
             <img
               src="/images/logo-pagina.png"
-              alt="Rehabilita.me"
+              alt="Rehabilitame"
               className="h-9 w-9 rounded-full object-cover shrink-0"
             />
             <span className="text-xs font-medium tracking-[0.3em] uppercase text-foreground">
-              rehabilita<span className="opacity-60">.me</span>
+              Rehabilitame
             </span>
           </Link>
           <p className="text-sm leading-[1.75] text-muted-foreground mt-5 max-w-xs">
@@ -83,7 +83,7 @@ export function Footer() {
 
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-8 border-t border-border gap-4">
         <p className="text-[11px] tracking-[0.1em] text-muted-foreground/50">
-          © {year} rehabilita.me · Iquique
+          © {year} Rehabilitame · Iquique
         </p>
         <div className="flex items-center gap-4">
           <Link

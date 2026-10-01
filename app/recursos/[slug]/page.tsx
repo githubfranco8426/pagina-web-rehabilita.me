@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const resource = resources.find(item => item.slug === slug)
   if (!resource) notFound()
-  return { title: `${resource.title} | rehabilita.me`, description: resource.description, alternates: { canonical: `/recursos/${slug}` }, openGraph: { title: resource.title, description: resource.description, url: `/recursos/${slug}`, type: "article", images: ["/images/domicilio-paciente.webp"] } }
+  return { title: `${resource.title} | Rehabilitame`, description: resource.description, alternates: { canonical: `/recursos/${slug}` }, openGraph: { title: resource.title, description: resource.description, url: `/recursos/${slug}`, type: "article", images: ["/images/domicilio-paciente.webp"] } }
 }
 
 export default async function ResourcePage({ params }: Props) {

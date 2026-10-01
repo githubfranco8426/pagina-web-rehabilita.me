@@ -96,7 +96,7 @@ export const rehabilitationPages: RehabilitationPage[] = [
     title: "Fonoaudiología para comunicarse y alimentarse mejor",
     description: "Fonoaudiología neuro-adultos a domicilio en Iquique y Alto Hospicio. Evaluación de comunicación, voz, lenguaje y deglución según cada caso.",
     intro: "Las dificultades de comunicación o deglución pueden cambiar la vida diaria de una persona y su familia. Evaluamos cada situación para definir objetivos de rehabilitación y recomendaciones individuales.",
-    image: "/images/foto-bar-clinico.png", imageAlt: "Bárbara Covarrubias, fonoaudióloga de rehabilita.me",
+    image: "/images/foto-bar-clinico.png", imageAlt: "Bárbara Covarrubias, fonoaudióloga de Rehabilitame",
     situations: ["Cambios en habla o lenguaje después de un ACV.", "Necesidades de apoyo comunicativo en condiciones neurológicas.", "Dificultades de voz o comunicación después de una hospitalización.", "Dificultad o inseguridad al comer y beber."],
     goals: [
       { title: "Comunicación cotidiana", text: "Objetivos de habla y lenguaje vinculados a situaciones relevantes: expresar necesidades, conversar o participar en la rutina familiar." },

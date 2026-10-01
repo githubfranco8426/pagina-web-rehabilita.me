@@ -3,6 +3,7 @@ import { ArrowRight, Flame } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { brand } from "@/lib/brand"
 
 interface Post {
   id: string
@@ -30,7 +31,7 @@ export function Blog7({
   heading = "Nos encuentras todos los días en Instagram",
   description = "Mitos vs. realidad, casos reales y consejos prácticos sobre kinesiología respiratoria, maxilofacial y fonoaudiología.",
   buttonText = "Seguir en Instagram",
-  buttonUrl = "https://www.instagram.com/rehabilita.meiqq/",
+  buttonUrl = brand.contact.instagramUrl,
   posts = [],
 }: Blog7Props) {
   return (

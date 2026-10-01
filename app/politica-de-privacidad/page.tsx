@@ -3,8 +3,8 @@ import Link from "next/link"
 import { brand } from "@/lib/brand"
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad · rehabilita.me",
-  description: "Cómo rehabilita.me recopila, usa y protege tus datos personales.",
+  title: "Política de Privacidad · Rehabilitame",
+  description: "Cómo Rehabilitame recopila, usa y protege tus datos personales.",
   alternates: {
     canonical: "/politica-de-privacidad",
   },

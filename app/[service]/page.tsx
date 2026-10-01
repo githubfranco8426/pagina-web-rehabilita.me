@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getRehabilitationPage(service)
   if (!page) notFound()
   return {
-    title: `${page.label} en Iquique y Alto Hospicio | rehabilita.me`,
+    title: `${page.label} en Iquique y Alto Hospicio | Rehabilitame`,
     description: page.description,
     alternates: { canonical: `/${page.slug}` },
     openGraph: { title: page.title, description: page.description, url: `/${page.slug}`, type: "website", images: [{ url: page.image, alt: page.imageAlt }] },

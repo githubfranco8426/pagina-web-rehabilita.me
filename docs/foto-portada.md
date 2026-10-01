@@ -1,0 +1,9 @@
+# Foto de portada de Rehabilitame
+
+Edición realizada con la herramienta integrada de ChatGPT Imágenes. Original preservado en `public/images/domicilio-paciente.webp`; imagen publicada en `public/images/domicilio-paciente-portada.webp`. Se convirtió el resultado a WebP para reducir el peso de descarga, conservando su tamaño.
+
+La edición mejora luz, balance de color, nitidez y fondo. Se pidió conservar identidad, expresión, postura y condición clínica de las dos personas. El resultado fue revisado visualmente antes de integrarlo.
+
+## Prompt utilizado
+
+Use case: identity-preserve. Edit target: the provided real photo of two people, a seated woman patient and a smiling male physiotherapist beside her. Create a polished but authentic website hero portrait photograph for Rehabilitame, professional home rehabilitation service. Preserve BOTH persons' exact recognizable facial identity, facial proportions, age, skin texture, expression, hair, clothing, body pose, embrace and hands; preserve the woman's visible tracheostomy and clinical condition exactly, do not remove or invent any medical equipment. Do not beautify or reshape faces. Improve only photographic lighting, white balance, clarity and background distractions. Soft natural daylight, balanced warm-neutral skin tones, subtle professional editorial contrast, crisp faces without over-smoothing. Keep believable actual home interior and stone wall, but remove distracting TV glare, TV screen content, speaker clutter and green cable, make background softly defocused and visually calm. Slightly tighten vertical portrait composition so both faces sit comfortably in upper-middle with generous headroom and room below for website text overlay, both persons together remain visible. No added text, logo, watermark, people, clinical props or fake clinic. Photorealistic restrained retouch, not illustration. Main priority: facial identity fidelity and unchanged patient condition.

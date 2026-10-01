@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
-  title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | rehabilita.me',
+  title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | Rehabilitame',
   description:
     'Rehabilitación especializada en tu hogar en Iquique y Alto Hospicio. Kinesiología y Fonoaudiología para recuperación post hospitalización, neurológica y respiratoria.',
   alternates: {
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     icon: '/images/logo-oficial.jpg',
   },
   openGraph: {
-    title: 'Rehabilitación especializada en tu hogar | rehabilita.me',
+    title: 'Rehabilitación especializada en tu hogar | Rehabilitame',
     description: 'Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio. Cuéntanos tu caso y te orientamos.',
-    images: [{ url: '/images/domicilio-paciente.webp', alt: 'Atención de rehabilitación en el hogar' }],
+    images: [{ url: '/images/domicilio-paciente-portada.webp', alt: 'Atención de rehabilitación en el hogar' }],
     locale: 'es_CL',
     url: '/',
     type: 'website',

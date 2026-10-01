@@ -165,7 +165,7 @@ export function ServicesSection() {
             Un centro, un mismo objetivo
           </p>
           <p className="text-muted-foreground text-base leading-relaxed mb-5">
-            En rehabilita.me abordamos cada caso desde una evaluación individual, entendiendo que la
+            En Rehabilitame abordamos cada caso desde una evaluación individual, entendiendo que la
             recuperación depende de múltiples factores: historia clínica, entorno, capacidad
             respiratoria, movilidad y objetivos personales de cada paciente.
           </p>

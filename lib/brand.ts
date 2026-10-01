@@ -1,5 +1,5 @@
 export const brand = {
-  name: "rehabilita.me",
+  name: "Rehabilitame",
   legalName: "Althia Med · Kinesiología y Fonoaudiología",
   tagline: "Rehabilitación especializada en tu hogar",
   contact: {

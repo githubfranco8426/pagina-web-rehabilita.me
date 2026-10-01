@@ -25,7 +25,7 @@ export function BookingWidgetSection() {
             <ArrowRight className="size-5" aria-hidden="true" />
           </a>
           <a
-            href={whatsappConsultasLink("Hola, quiero saber qué atención de rehabilita.me corresponde a mi caso.")}
+            href={whatsappConsultasLink("Hola, quiero saber qué atención de Rehabilitame corresponde a mi caso.")}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsappClick("final_cta")}

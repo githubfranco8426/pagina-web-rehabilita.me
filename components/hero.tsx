@@ -43,12 +43,12 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-[540px]">
           <div className="relative h-[410px] overflow-hidden rounded-[2rem] bg-sky-100 shadow-[0_25px_70px_-35px_rgba(27,54,93,.45)] sm:h-[510px] lg:h-[570px]">
             <Image
-              src="/images/domicilio-paciente.webp"
+              src="/images/domicilio-paciente-portada.webp"
               alt="Franco Tabilo junto a una paciente durante una atención en domicilio"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 540px"
-              className="object-cover object-[center_38%]"
+              className="object-cover object-[center_35%]"
             />
             <div
               className="absolute inset-x-0 bottom-0 px-7 pb-7 pt-28 text-white"
@@ -59,7 +59,7 @@ export function Hero() {
             </div>
           </div>
           <div className="absolute -bottom-5 -left-3 rounded-2xl border border-sky-900/10 bg-white px-5 py-4 shadow-xl sm:-left-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">rehabilita.me</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">Rehabilitame</p>
             <p className="mt-1 text-sm font-medium text-sky-900">Un equipo, atención personalizada.</p>
           </div>
         </div>

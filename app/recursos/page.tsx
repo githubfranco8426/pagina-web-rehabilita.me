@@ -6,10 +6,10 @@ import { JournalSection } from "@/components/journal-section"
 import { resources } from "@/lib/resources"
 
 export const metadata: Metadata = {
-  title: "Recursos para pacientes y familias | rehabilita.me",
-  description: "Orientación para acompañar la rehabilitación en casa después de una hospitalización o un ACV. Recursos de rehabilita.me en Iquique y Alto Hospicio.",
+  title: "Recursos para pacientes y familias | Rehabilitame",
+  description: "Orientación para acompañar la rehabilitación en casa después de una hospitalización o un ACV. Recursos de Rehabilitame en Iquique y Alto Hospicio.",
   alternates: { canonical: "/recursos" },
-  openGraph: { title: "Recursos para acompañar la recuperación en casa", description: "Orientación para pacientes y familias de rehabilita.me.", url: "/recursos", images: ["/images/domicilio-paciente.webp"] },
+  openGraph: { title: "Recursos para acompañar la recuperación en casa", description: "Orientación para pacientes y familias de Rehabilitame.", url: "/recursos", images: ["/images/domicilio-paciente.webp"] },
 }
 
 export default function ResourcesPage() {
