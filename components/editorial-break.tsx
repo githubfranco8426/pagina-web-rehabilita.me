@@ -24,9 +24,9 @@ export function EditorialBreak() {
         >
           <motion.img
             style={{ y: imageY }}
-            src="/images/domicilio-paciente.webp"
-            alt="Franco Tabilo junto a una paciente en control de kinesiología respiratoria a domicilio"
-            className="w-full aspect-[16/10] object-cover scale-110 grayscale hover:grayscale-0 transition-[filter] duration-700"
+            src="/images/cuida-como-respiras.jpg"
+            alt="Ilustración infantil que muestra el movimiento de las costillas y el flujo del aire al respirar"
+            className="w-full aspect-[3/4] object-cover"
           />
         </motion.div>
         <motion.div
