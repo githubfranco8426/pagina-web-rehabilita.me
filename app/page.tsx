@@ -20,7 +20,6 @@ export default function Page() {
       <Navigation />
       <main>
         <Hero />
-        <ReimbursementSection />
         <Marquee />
         <RehabilitationPaths />
         <ServicesSection />
@@ -30,6 +29,7 @@ export default function Page() {
         <CasesSection />
         <ApproachSection />
         <JournalSection />
+        <ReimbursementSection />
         <FaqSection />
         <BookingWidgetSection />
       </main>
