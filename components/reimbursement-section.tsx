@@ -1,8 +1,22 @@
 "use client"
 
+import Image from "next/image"
 import { ArrowUpRight, FileCheck2, ReceiptText, ShieldCheck } from "lucide-react"
 import { whatsappConsultasLink } from "@/lib/brand"
 import { trackWhatsappClick } from "@/lib/analytics"
+
+const isapres = [
+  { name: "Banmédica", image: "banmedica.png", url: "https://www.banmedica.cl/" },
+  { name: "Colmena", image: "colmena.png", url: "https://www.colmena.cl/" },
+  { name: "Consalud", image: "consalud.png", url: "https://www.consalud.cl/" },
+  { name: "Cruz Blanca", image: "cruz-blanca.png", url: "https://www.cruzblanca.cl/" },
+  { name: "Nueva Masvida", image: "nueva-masvida.jpg", url: "https://www.nuevamasvida.cl/" },
+  { name: "Vida Tres", image: "vida-tres.png", url: "https://www.vidatres.cl/" },
+  { name: "Esencial", image: "esencial.png", url: "https://www.somosesencial.cl/" },
+  { name: "Isalud", image: "isalud.png", url: "https://www.isapredecodelco.cl/" },
+  { name: "Fundación", image: "fundacion.png", url: "https://www.isaprefundacion.cl/" },
+  { name: "Cruz del Norte", image: "cruz-del-norte.png", url: "https://www.isaprecruzdelnorte.cl/" },
+]
 
 const steps = [
   {
@@ -34,6 +48,24 @@ export function ReimbursementSection() {
           <p className="max-w-xl text-base leading-relaxed text-foreground/80">
             Emitimos boleta de honorarios por tu atención de Kinesiología o Fonoaudiología. Puedes presentarla para solicitar reembolso, según la cobertura de tu plan.
           </p>
+        </div>
+        <div className="mt-8">
+          <p className="mb-4 text-sm font-medium text-foreground/75">Consulta los requisitos directamente en tu Isapre:</p>
+          <ul aria-label="Sitios oficiales de las Isapres" className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+            {isapres.map(({ name, image, url }) => (
+              <li key={name}>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ir al sitio oficial de ${name} (abre en otra pestaña)`}
+                  className="flex min-h-24 items-center justify-center rounded-2xl border border-sky-900/10 bg-white px-5 py-5 transition-colors hover:border-olive-700/40 hover:bg-background focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700"
+                >
+                  <Image src={`/images/isapres/${image}`} alt={name} width={180} height={60} className="h-12 w-full max-w-40 object-contain" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <ol className="mt-9 grid gap-4 md:grid-cols-3">
           {steps.map(({ icon: Icon, title, description }, index) => (
