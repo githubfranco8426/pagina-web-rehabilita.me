@@ -30,16 +30,16 @@ export function Footer() {
         <div className="md:col-span-5">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
-              src="/images/logo-rehabilitame-v2.webp"
-              alt="Rehabilitame"
-              width={210}
-              height={140}
-              sizes="210px"
-              className="h-[140px] w-[210px] object-contain shrink-0"
+              src="/images/b12/logo-web-sin-lema.svg"
+              alt="Rehabilítame"
+              width={760}
+              height={220}
+              sizes="300px"
+              className="h-auto w-[300px] max-w-full object-contain shrink-0"
             />
           </Link>
           <p className="text-sm leading-[1.75] text-muted-foreground mt-5 max-w-xs">
-            Kinesiología y Fonoaudiología coordinadas para acompañarte en Iquique y Alto Hospicio.
+            Rehabilitación en tu hogar. Kinesiología y Fonoaudiología en Iquique y Alto Hospicio.
           </p>
         </div>
 

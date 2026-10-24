@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
+import { ReimbursementSection } from "@/components/reimbursement-section"
 import { Marquee } from "@/components/marquee"
 import { AboutSection } from "@/components/about-section"
 import { ServicesSection } from "@/components/services-section"
@@ -19,6 +20,7 @@ export default function Page() {
       <Navigation />
       <main>
         <Hero />
+        <ReimbursementSection />
         <Marquee />
         <RehabilitationPaths />
         <ServicesSection />

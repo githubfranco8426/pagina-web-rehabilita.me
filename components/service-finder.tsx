@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, Baby, Brain, ChevronLeft, ChevronDown, HeartPulse, Stethoscope, Wind } from "lucide-react"
-import { bookingAppReservarUrl, whatsappConsultasLink } from "@/lib/brand"
+import { bookingAppDomicilioUrl, whatsappConsultasLink } from "@/lib/brand"
 import { trackBookingClick, trackEngagement, trackWhatsappClick } from "@/lib/analytics"
 
 type Need = "postalta" | "neuro" | "autonomia" | "respiracion" | "lactancia" | "habla" | "maxilofacial" | "deglucion"
@@ -120,8 +120,8 @@ export function ServiceFinder() {
               <p className="mt-2 text-sm leading-relaxed opacity-80">{result.copy}</p>
             </div>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:mt-0">
-              <a href={bookingAppReservarUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick(`finder_${selectedNeed}`)} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-sky-700 px-5 text-sm font-medium text-white transition hover:bg-sky-800">
-                Agendar evaluación <ArrowRight className="size-4" aria-hidden="true" />
+              <a href={bookingAppDomicilioUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick(`finder_${selectedNeed}`)} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-sky-700 px-5 text-sm font-medium text-white transition hover:bg-sky-800">
+                Solicitar evaluación a domicilio <ArrowRight className="size-4" aria-hidden="true" />
               </a>
               <a href={whatsappConsultasLink(result.message)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick(`finder_${selectedNeed}`)} className="inline-flex min-h-11 items-center justify-center rounded-full border border-current/30 px-5 text-sm font-medium transition hover:bg-white/50">
                 Resolver una duda

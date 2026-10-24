@@ -1,7 +1,7 @@
 export const brand = {
-  name: "Rehabilitame",
+  name: "Rehabilítame",
   legalName: "Althia Med · Kinesiología y Fonoaudiología",
-  tagline: "Kinesiología y Fonoaudiología coordinadas para acompañarte en casa",
+  tagline: "Rehabilitación en tu hogar",
   contact: {
     whatsapp: "56930286388",
     whatsappDisplay: "+56 9 3028 6388",
@@ -40,3 +40,7 @@ export const bookingAppUrl = process.env.NEXT_PUBLIC_BOOKING_APP_URL || "https:/
 
 // Lleva a la elección de reserva sin la portada intermedia de la app.
 export const bookingAppReservarUrl = `${bookingAppUrl.replace(/\/$/, "")}/reservar`
+
+// Domicile requests are confirmed by the clinical team before booking.
+export const bookingAppDomicilioUrl = `${bookingAppUrl.replace(/\/$/, "")}/solicitar-evaluacion`
+export const bookingAppConsultaUrl = `${bookingAppReservarUrl}?modo=especialidad&modalidad=consulta`

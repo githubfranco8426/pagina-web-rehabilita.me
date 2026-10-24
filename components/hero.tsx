@@ -1,8 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { MapPin } from "lucide-react"
-import { bookingAppReservarUrl } from "@/lib/brand"
+import { MapPin, ReceiptText, ArrowUpRight } from "lucide-react"
+import { bookingAppConsultaUrl } from "@/lib/brand"
 import { trackBookingClick } from "@/lib/analytics"
 import { ContextualCta } from "@/components/contextual-cta"
 
@@ -16,25 +16,34 @@ export function Hero() {
             Domicilios en Iquique y Alto Hospicio
           </p>
           <h1 className="max-w-[13ch] text-balance text-[clamp(2.65rem,5vw,4.65rem)] font-semibold leading-[1.06] tracking-[-0.055em] text-sky-900">
-            Rehabilitación en equipo, en tu hogar.
+            Rehabilitación en tu hogar.
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-foreground/80 md:text-xl">
-            Somos un equipo de Kinesiología y Fonoaudiología. Coordinamos objetivos y cuidados
-            para acompañarte a ti y a tu familia, y recuperar movilidad, comunicación y autonomía
-            después de una hospitalización, un ACV o una enfermedad respiratoria.
+            Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio.
+            Comenzamos con una evaluación para definir los objetivos y la atención
+            que necesita cada persona, junto a su familia.
           </p>
           <div className="mt-9">
             <ContextualCta source="hero" />
+            <p className="mt-3 text-sm leading-relaxed text-foreground/75">Al solicitar atención a domicilio, confirmamos contigo profesional, valor y horario antes de agendar.</p>
           </div>
           <div className="mt-5">
             <a
-              href={bookingAppReservarUrl}
+              href={bookingAppConsultaUrl}
               onClick={() => trackBookingClick("hero")}
               className="inline-flex min-h-11 items-center text-sm font-medium text-sky-800 underline underline-offset-4"
             >
-              También atendemos en consulta y online
+              También puedes reservar en consulta
             </a>
           </div>
+          <a
+            href="#reembolsos"
+            className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl border border-olive-700/20 bg-white/80 px-4 py-3 text-sm font-semibold text-olive-700 transition-colors hover:bg-olive-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
+          >
+            <ReceiptText className="size-5 shrink-0" aria-hidden="true" />
+            Reembolso con Isapre, según tu plan
+            <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
+          </a>
           <p className="mt-8 text-sm font-medium leading-relaxed text-foreground/65">
             Post UCI y post hospitalización <span aria-hidden="true">·</span> Neurológica <span aria-hidden="true">·</span> Respiratoria <span aria-hidden="true">·</span> Funcional
           </p>
@@ -59,7 +68,7 @@ export function Hero() {
             </div>
           </div>
           <div className="absolute -bottom-5 -left-3 rounded-2xl border border-sky-900/10 bg-white px-5 py-4 shadow-xl sm:-left-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">Rehabilitame</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">Rehabilítame</p>
               <p className="mt-1 text-sm font-medium text-sky-900">Kinesiología + Fonoaudiología</p>
           </div>
         </div>

@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Lato', 'system-ui', 'sans-serif'],
       },
       colors: {
         // Azul marino corporativo (confianza y salud) — reemplaza el sky-* de Tailwind por defecto
@@ -23,7 +23,7 @@ const config: Config = {
           400: 'oklch(0.6 0.07 255)',
           500: 'oklch(0.46 0.08 255)',
           600: 'oklch(0.36 0.075 255)',
-          700: 'oklch(0.28 0.065 255)',
+          700: '#0D253F',
           800: 'oklch(0.22 0.05 255)',
           900: 'oklch(0.16 0.035 255)',
         },
@@ -34,7 +34,7 @@ const config: Config = {
           200: 'oklch(0.87 0.05 76)',
           300: 'oklch(0.79 0.07 74)',
           400: 'oklch(0.72 0.085 73)',
-          500: 'oklch(0.65 0.095 72)',
+          500: '#D7B56D',
           600: 'oklch(0.56 0.09 68)',
           700: 'oklch(0.47 0.08 64)',
           800: 'oklch(0.38 0.06 60)',
@@ -44,7 +44,7 @@ const config: Config = {
         olive: {
           100: 'oklch(0.92 0.03 125)',
           300: 'oklch(0.78 0.05 128)',
-          500: 'oklch(0.52 0.065 125)',
+          500: '#73834D',
           700: 'oklch(0.38 0.055 125)',
         },
         background: 'hsl(var(--background))',

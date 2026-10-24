@@ -9,6 +9,10 @@ import { WhatsappIcon } from "@/components/whatsapp-icon"
 
 const faqs = [
   {
+    question: "¿Puedo solicitar reembolso en mi Isapre?",
+    answer: "Sí. Emitimos boleta de honorarios para que puedas solicitar reembolso por tu atención de Kinesiología o Fonoaudiología. La cobertura, el monto y la aprobación dependen de tu plan y de los requisitos de tu Isapre. Antes de atenderte, confirma con ella si necesitas orden médica u otros antecedentes, especialmente para atención a domicilio. El reembolso se solicita después de pagar la atención.",
+  },
+  {
     question: "¿Pueden orientarme después de una hospitalización o un ACV?",
     answer: "Sí. Cuéntanos qué dificultades presenta la persona y te orientamos sobre la evaluación pertinente. Consideramos las indicaciones del equipo tratante y coordinamos Kinesiología y Fonoaudiología cuando el caso lo requiere.",
   },
@@ -19,7 +23,7 @@ const faqs = [
   {
     question: "¿Necesito una derivación médica para agendar hora?",
     answer:
-      "No es obligatorio. Puedes agendar directamente con nosotros y, en la primera sesión, evaluamos tu caso para definir el mejor plan de tratamiento.",
+      "Puedes solicitar una evaluación directamente con nosotros. Si quieres pedir reembolso, consulta antes con tu Isapre si exige orden médica para la prestación y modalidad de atención que necesitas.",
   },
   {
     question: "¿Atienden a domicilio en toda la región?",

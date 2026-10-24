@@ -1,27 +1,26 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
 import { MotionProvider } from '@/components/motion-provider'
 import { brand } from '@/lib/brand'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
-  title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | Rehabilitame',
+  title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | Rehabilítame',
   description:
     'Equipo de Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio. Atención coordinada para recuperación post hospitalización, neurológica y respiratoria.',
   alternates: {
     canonical: '/',
   },
   icons: {
-    icon: '/images/logo-rehabilitame-v2.png',
+    icon: '/images/b12/avatar.png',
   },
   openGraph: {
-    title: 'Rehabilitación en equipo a domicilio | Rehabilitame',
+    title: 'Rehabilitación en equipo a domicilio | Rehabilítame',
     description: 'Kinesiología y Fonoaudiología trabajan en coordinación para acompañar a personas y familias en Iquique y Alto Hospicio.',
     images: [{ url: '/images/domicilio-paciente-portada.webp', alt: 'Atención de rehabilitación en el hogar' }],
     locale: 'es_CL',
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1b365d',
+  themeColor: '#0D253F',
 }
 
 // Datos estructurados (Schema.org) para que Google entienda que somos un
@@ -46,8 +45,8 @@ const structuredData = {
   description:
     'Equipo de Kinesiología y Fonoaudiología con objetivos coordinados. Atención en Iquique y Alto Hospicio, a domicilio, en consulta y online según el caso.',
   url: 'https://rehabilitame.cl',
-  image: 'https://rehabilitame.cl/images/logo-rehabilitame-v2.png',
-  logo: 'https://rehabilitame.cl/images/logo-rehabilitame-v2.png',
+  image: 'https://rehabilitame.cl/images/b12/avatar.png',
+  logo: 'https://rehabilitame.cl/images/b12/avatar.png',
   telephone: `+${brand.contact.whatsappConsultas}`,
   address: {
     '@type': 'PostalAddress',
@@ -79,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es">
       <body className="font-sans antialiased">
         {GA_ID && (
           <>

@@ -1,13 +1,16 @@
 "use client"
 
-import { Baby, Activity, Wind, ArrowUpRight } from "lucide-react"
+import { Baby, Activity, Wind, Smile, Utensils, ArrowUpRight } from "lucide-react"
 import { whatsappConsultasLink } from "@/lib/brand"
 import { trackWhatsappClick } from "@/lib/analytics"
 
 const otherServices = [
-  { icon: Wind, title: "Respiratorio infantil", text: "Evaluación respiratoria para niños y niñas, con orientación a su familia.", message: "Hola, quisiera consultar por atención respiratoria infantil.", id: "respiratorio_infantil" },
+  { icon: Wind, title: "Kinesiología respiratoria", text: "Evaluación y rehabilitación respiratoria después de una enfermedad u hospitalización, según cada caso.", message: "Hola, quisiera consultar por kinesiología respiratoria.", id: "respiratorio" },
+  { icon: Activity, title: "Rehabilitación funcional", text: "Evaluación de fuerza, movilidad y actividades cotidianas para definir los objetivos de rehabilitación.", message: "Hola, quisiera consultar por rehabilitación funcional.", id: "funcional" },
   { icon: Activity, title: "Maxilofacial", text: "Atención de la musculatura facial y mandibular, coordinada con tu odontólogo cuando corresponde.", message: "Hola, quisiera consultar por kinesiología maxilofacial.", id: "maxilofacial" },
   { icon: Baby, title: "Lactancia y frenillo", text: "Evaluación de succión y frenillo lingual para acompañar la lactancia.", message: "Hola, quisiera consultar por lactancia o frenillo lingual.", id: "lactancia" },
+  { icon: Smile, title: "Parálisis facial", text: "Evaluación del movimiento y la función facial para definir la rehabilitación según las necesidades de cada persona.", message: "Hola, quisiera consultar por rehabilitación de parálisis facial.", id: "paralisis_facial" },
+  { icon: Utensils, title: "Rehabilitación en disfagia", text: "Evaluación fonoaudiológica de las dificultades para tragar, con un plan de atención y orientación individual para la persona y su familia.", message: "Hola, quisiera consultar por evaluación y rehabilitación en disfagia.", id: "disfagia" },
 ]
 
 export function ServicesSection() {
@@ -16,7 +19,7 @@ export function ServicesSection() {
       <div className="mx-auto max-w-7xl">
         <h2 id="other-services-title" className="text-2xl font-semibold tracking-tight text-sky-900 md:text-3xl">Otras atenciones</h2>
         <p className="mt-3 max-w-2xl text-base text-muted-foreground">También puedes consultar por estas necesidades. Confirmamos contigo la modalidad y disponibilidad.</p>
-        <div className="mt-7 grid gap-6 md:grid-cols-3">
+        <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {otherServices.map(({ icon: Icon, ...service }) => (
             <article key={service.id} className="flex flex-col rounded-2xl border border-border p-5">
               <Icon className="size-5 text-sky-700" aria-hidden="true" />

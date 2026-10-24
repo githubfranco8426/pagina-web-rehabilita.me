@@ -17,13 +17,13 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 212 48% 19%;
+    --background: 42.00 41.67% 95.29%;
+    --foreground: 211.20 65.79% 14.90%;
     --card: 0 0% 100%;
     --card-foreground: 212 48% 19%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 5%;
-    --primary: 213 47% 27%;
+    --primary: 211.20 65.79% 14.90%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 94%;
     --secondary-foreground: 0 0% 5%;
@@ -35,7 +35,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 213 47% 27%;
+    --ring: 211.20 65.79% 14.90%;
     --radius: 0.75rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 15%;
@@ -77,3 +77,10 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* B1.2: gold/olive are graphic accents; body copy remains navy. */
+:root { --brand-gold: #D7B56D; --brand-olive: #73834D; }
+
+@font-face { font-family: Lato; src: url("/fonts/b12/Lato-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Lato; src: url("/fonts/b12/Lato-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: Lato; src: url("/fonts/b12/Lato-Black.ttf") format("truetype"); font-weight: 900; font-style: normal; font-display: swap; }

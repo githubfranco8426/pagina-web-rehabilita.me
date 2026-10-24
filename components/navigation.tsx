@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { bookingAppReservarUrl } from "@/lib/brand"
+import { bookingAppDomicilioUrl } from "@/lib/brand"
 import { trackBookingClick } from "@/lib/analytics"
 
 const links = [
@@ -25,9 +25,9 @@ export function Navigation() {
       >
         Saltar al contenido
       </a>
-      <nav className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-4 px-5 md:px-8" aria-label="Navegación principal">
-        <Link href="/" aria-label="Rehabilitame, inicio" className="inline-flex min-h-11 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600" onClick={() => setMenuOpen(false)}>
-          <Image src="/images/logo-rehabilitame-v2.webp" alt="Rehabilitame" width={120} height={80} sizes="120px" className="h-20 w-[120px] shrink-0 object-contain mix-blend-multiply" priority />
+      <nav className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-2 sm:gap-4 px-5 md:px-8" aria-label="Navegación principal">
+        <Link href="/" aria-label="Rehabilítame, inicio" className="inline-flex min-h-11 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600" onClick={() => setMenuOpen(false)}>
+          <Image src="/images/b12/logo-web-sin-lema.svg" alt="Rehabilítame" width={760} height={220} sizes="(max-width: 640px) 140px, 220px" className="h-auto w-[140px] shrink-0 sm:w-[220px]" priority />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
@@ -40,11 +40,11 @@ export function Navigation() {
 
         <div className="flex items-center gap-2">
           <a
-            href={bookingAppReservarUrl}
+            href={bookingAppDomicilioUrl}
             onClick={() => trackBookingClick("nav")}
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-sky-700 px-3 text-sm font-semibold text-white transition-colors hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2 sm:px-4 md:px-6"
           >
-            <span className="sm:hidden">Agendar</span><span className="hidden sm:inline">Agendar evaluación</span>
+            <span className="sm:hidden">Solicitar</span><span className="hidden sm:inline">Solicitar evaluación</span>
           </a>
           <button
             type="button"

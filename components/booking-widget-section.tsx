@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowRight } from "lucide-react"
-import { bookingAppReservarUrl, whatsappConsultasLink } from "@/lib/brand"
+import { bookingAppDomicilioUrl, whatsappConsultasLink } from "@/lib/brand"
 import { trackBookingClick, trackWhatsappClick } from "@/lib/analytics"
 
 export function BookingWidgetSection() {
@@ -13,15 +13,15 @@ export function BookingWidgetSection() {
           Cuéntanos qué necesitas. Te ayudamos a dar el siguiente paso.
         </h2>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-          Puedes reservar en línea o escribirnos si aún no sabes qué atención corresponde a tu caso.
+          Solicita atención a domicilio o escríbenos si tienes dudas. Confirmamos contigo profesional, valor y horario antes de agendar.
         </p>
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
           <a
-            href={bookingAppReservarUrl}
+            href={bookingAppDomicilioUrl}
             onClick={() => trackBookingClick("final_cta")}
             className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-white px-7 font-semibold text-sky-900 transition-colors hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-sky-900"
           >
-            Agendar evaluación
+            Solicitar evaluación a domicilio
             <ArrowRight className="size-5" aria-hidden="true" />
           </a>
           <a
