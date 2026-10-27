@@ -1,7 +1,7 @@
-export type ShopProduct = {id:string;name:string;category:string;mode:string;objective:string;spec:string;art:string;cls:string}
+export type ShopProduct = {id:string;name:string;category:string;mode:string;objective:string;spec:string;art:string;cls:string;priceCLP:number|null;isExample:boolean}
 export const shopProducts: ShopProduct[] = [
   {
-    "id": "FON-01",
+    "priceCLP": null, "isExample": true, "id": "FON-01",
     "name": "Tarjetas de secuencias narrativas",
     "category": "Fonoaudiología",
     "mode": "Inventario limitado",
@@ -11,7 +11,7 @@ export const shopProducts: ShopProduct[] = [
     "cls": ""
   },
   {
-    "id": "FON-02",
+    "priceCLP": null, "isExample": true, "id": "FON-02",
     "name": "Espejo de apoyo articulatorio",
     "category": "Fonoaudiología",
     "mode": "Por encargo",
@@ -21,7 +21,7 @@ export const shopProducts: ShopProduct[] = [
     "cls": ""
   },
   {
-    "id": "TO-01",
+    "priceCLP": null, "isExample": true, "id": "TO-01",
     "name": "Set de pinzas y clasificación",
     "category": "Terapia ocupacional",
     "mode": "Inventario limitado",
@@ -31,7 +31,7 @@ export const shopProducts: ShopProduct[] = [
     "cls": "to"
   },
   {
-    "id": "TO-02",
+    "priceCLP": null, "isExample": true, "id": "TO-02",
     "name": "Tablero de actividades cotidianas",
     "category": "Terapia ocupacional",
     "mode": "Por encargo",
@@ -41,7 +41,7 @@ export const shopProducts: ShopProduct[] = [
     "cls": "to"
   },
   {
-    "id": "KIN-01",
+    "priceCLP": null, "isExample": true, "id": "KIN-01",
     "name": "Banda para ejercicio terapéutico",
     "category": "Kinesiología",
     "mode": "Por encargo",
@@ -51,7 +51,7 @@ export const shopProducts: ShopProduct[] = [
     "cls": "ki"
   },
   {
-    "id": "EDI-01",
+    "priceCLP": null, "isExample": true, "id": "EDI-01",
     "name": "Apoyos visuales para rutinas",
     "category": "Educación diferencial",
     "mode": "Por encargo",
@@ -61,3 +61,4 @@ export const shopProducts: ShopProduct[] = [
     "cls": "ed"
   }
 ]
+

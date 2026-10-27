@@ -3,11 +3,20 @@
 import { useRef, useState } from 'react'
 import { shopProducts, type ShopProduct } from '@/lib/shop-products'
 import { whatsappConsultasLink } from '@/lib/brand'
+import Link from 'next/link'
+import { useShopCart } from '@/components/shop-cart-provider'
 
 const categories = ['Todas', 'Fonoaudiología', 'Terapia ocupacional', 'Kinesiología', 'Educación diferencial']
 const normalize = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 
 export function Shop() {
+  const cart = useShopCart()
+  const [cartNotice, setCartNotice] = useState('')
+  const cartCount = cart.items.reduce((sum, item) => sum + item.quantity, 0)
+  function addToCart(product: ShopProduct) {
+    cart.addItem(product.id)
+    setCartNotice(`${product.name}: selección actualizada. Puedes revisarla en el carrito de ejemplo.`)
+  }
   const [category, setCategory] = useState('Todas')
   const [query, setQuery] = useState('')
   const [mode, setMode] = useState('Todas')
@@ -62,7 +71,7 @@ export function Shop() {
     <div className="draft launch">TIENDA EN PREPARACIÓN · Catálogo de ejemplo · Precios y disponibilidad por confirmar</div>
     <header>
       <a href="/shop" aria-label="Rehabilítame Shop, inicio"><img className="logo" src="/shop-assets/rehabilitame-shop.svg" width="1050" height="240" alt="Rehabilítame Shop" /></a>
-      <nav aria-label="Navegación de Shop"><a href="#catalogo">Catálogo</a><a href="#encargos">Cómo consultar</a><a href="/">Servicios clínicos ↗</a></nav>
+      <nav aria-label="Navegación de Shop"><a href="#catalogo">Catálogo</a><Link className="cart-link" href="/shop/carrito">Carrito de ejemplo ({cartCount})</Link><a href="/">Servicios clínicos ↗</a></nav>
     </header>
     <main id="contenido">
       <section className="hero"><div>
@@ -80,6 +89,7 @@ export function Shop() {
       <section id="catalogo" className="catalog">
         <div className="section-head"><div><p className="eyebrow">ELIGE SEGÚN TU PRÁCTICA</p><h2>Catálogo profesional</h2></div><button className="text-button" onClick={downloadCatalog}>Descargar catálogo de ejemplo ↓</button></div>
         <p className="muted">Estamos preparando nuestra selección. Todas las fichas son ejemplos ilustrativos y no representan una oferta comercial.</p>
+        <p role="status" className="cart-feedback">{cartNotice}</p>
         <div className="categories" role="group" aria-label="Especialidades">{categories.map(item => <button key={item} aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}</div>
         <div className="filters">
           <label>Buscar recurso<input type="search" placeholder="Nombre u objetivo terapéutico" value={query} onChange={event => setQuery(event.target.value)} /></label>
@@ -91,7 +101,7 @@ export function Shop() {
           <div className={`visual ${product.cls}`} aria-hidden="true"><small>EJEMPLO ILUSTRATIVO</small><span>{product.art}</span></div>
           <div className="card-content"><div className="tag">{product.category}</div><h3>{product.name}</h3><p>{product.objective}</p>
             <div className="meta"><strong>Precio: por confirmar</strong>Disponibilidad: no confirmada<br />Modalidad propuesta: {product.mode.toLowerCase()}</div>
-            <button aria-label={`Ver ficha: ${product.name}`} onClick={() => openProduct(product)}>Ver ficha y consultar ↗</button>
+            <div className="card-actions"><button aria-label={`Ver ficha: ${product.name}`} onClick={() => openProduct(product)}>Ver ficha y consultar ↗</button><button className="cart-add" disabled={!cart.hydrated} aria-label={`Agregar al carrito de ejemplo: ${product.name}`} onClick={() => addToCart(product)}>Agregar al carrito de ejemplo +</button></div>
           </div>
         </article>) : <div className="empty">No hay ejemplos con estos filtros. Prueba otra búsqueda o limpia los filtros.</div>}</div>
       </section>
@@ -103,7 +113,7 @@ export function Shop() {
     <dialog ref={detail} aria-labelledby="detail-title"><button className="close" aria-label="Cerrar ficha" onClick={() => detail.current?.close()}>×</button>
       {selected ? <><p className="eyebrow">FICHA DE EJEMPLO · {selected.id}</p><h2 id="detail-title">{selected.name}</h2><p>{selected.category}</p>
         <dl><dt>Objetivo propuesto</dt><dd>{selected.objective}</dd><dt>Especificaciones</dt><dd>{selected.spec}</dd><dt>Precio</dt><dd>Por confirmar. No hay precio de venta definido.</dd><dt>Disponibilidad</dt><dd>No confirmada. No se han verificado existencias.</dd><dt>Modalidad propuesta</dt><dd>{selected.mode}. No constituye disponibilidad ni plazo de entrega.</dd></dl>
-        <p className="muted">Contenido de ejemplo. La selección y el uso deben ser revisados por el profesional. No se atribuyen resultados clínicos al producto.</p><button className="button" onClick={() => prepareConsultation(selected)}>Consultar por WhatsApp ↗</button></> : null}
+        <p className="muted">Contenido de ejemplo. La selección y el uso deben ser revisados por el profesional. No se atribuyen resultados clínicos al producto.</p><div className="consult-actions"><button className="button gold" disabled={!cart.hydrated} onClick={() => {addToCart(selected);detail.current?.close()}}>Agregar al carrito de ejemplo +</button><button className="button" onClick={() => prepareConsultation(selected)}>Consultar por WhatsApp ↗</button></div></> : null}
     </dialog>
     <dialog ref={consultation} aria-labelledby="consult-title"><button className="close" aria-label="Cerrar consulta" onClick={() => consultation.current?.close()}>×</button><p className="eyebrow">REHABILÍTAME SHOP</p><h2 id="consult-title">Consulta por WhatsApp</h2><p>Consulta al equipo sobre la tienda en preparación. Los productos de este catálogo son ejemplos y no tienen precio ni disponibilidad confirmados.</p><label>Mensaje de consulta<textarea ref={messageField} rows={7} readOnly value={message} /></label><p className="muted">Abrir WhatsApp prepara el mensaje. Tú decides si enviarlo. Evita incluir datos de pacientes.</p><div className="consult-actions"><a className="button gold" href={whatsappConsultasLink(message)} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a><button className="button" onClick={copyMessage}>Copiar mensaje</button></div><p role="status">{copyStatus}</p></dialog>
   </div>

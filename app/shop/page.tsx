@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 }
 
 export default function ShopPage() {
-  return <><link rel="stylesheet" href="/shop-assets/shop.css" /><Shop /></>
+  return <Shop />
 }
