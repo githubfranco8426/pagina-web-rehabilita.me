@@ -12,6 +12,7 @@ const footerLinks = [
   { label: "Servicios", href: "/#servicios" },
   { label: "Sobre nosotros", href: "/#nosotros" },
   { label: "Recursos", href: "/recursos" },
+  { label: "Shop", href: "/shop" },
   { label: "Preguntas frecuentes", href: "/#faq" },
 ]
 

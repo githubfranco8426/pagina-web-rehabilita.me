@@ -12,6 +12,7 @@ const links = [
   { label: "Servicios", href: "/#servicios" },
   { label: "Equipo", href: "/#nosotros" },
   { label: "Recursos", href: "/recursos" },
+  { label: "Shop", href: "/shop" },
 ]
 
 export function Navigation() {
