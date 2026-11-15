@@ -9,11 +9,12 @@ import { fadeIn, viewportOnce } from "@/lib/motion"
 
 const footerLinks = [
   { label: "Rehabilitación a domicilio", href: "/rehabilitacion-domiciliaria" },
-  { label: "Servicios", href: "/#servicios" },
-  { label: "Sobre nosotros", href: "/#nosotros" },
+  { label: "Servicios", href: "/adultos#servicios" },
+  { label: "Sobre nosotros", href: "/adultos#nosotros" },
   { label: "Recursos", href: "/recursos" },
-  { label: "Shop", href: "/shop" },
-  { label: "Preguntas frecuentes", href: "/#faq" },
+  { label: "Rehabilítame Kids", href: "/" },
+  { label: "Adultos", href: "/adultos" },
+  { label: "Preguntas frecuentes", href: "/adultos#faq" },
 ]
 
 export function Footer() {

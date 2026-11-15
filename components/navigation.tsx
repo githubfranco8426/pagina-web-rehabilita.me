@@ -9,10 +9,11 @@ import { trackBookingClick } from "@/lib/analytics"
 
 const links = [
   { label: "A domicilio", href: "/rehabilitacion-domiciliaria" },
-  { label: "Servicios", href: "/#servicios" },
-  { label: "Equipo", href: "/#nosotros" },
+  { label: "Servicios", href: "/adultos#servicios" },
+  { label: "Equipo", href: "/adultos#nosotros" },
   { label: "Recursos", href: "/recursos" },
-  { label: "Shop", href: "/shop" },
+  { label: "Kids", href: "/" },
+  { label: "Adultos", href: "/adultos" },
 ]
 
 export function Navigation() {

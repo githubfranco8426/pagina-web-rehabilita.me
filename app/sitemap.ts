@@ -4,6 +4,7 @@ import { resources } from '@/lib/resources'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    { url: 'https://rehabilitame.cl/adultos', changeFrequency: 'monthly', priority: 0.8 },
     {
       url: 'https://rehabilitame.cl/',
       lastModified: new Date(),

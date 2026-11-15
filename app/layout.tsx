@@ -10,9 +10,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rehabilitame.cl'),
-  title: 'Rehabilitación a domicilio en Iquique y Alto Hospicio | Rehabilítame',
+  title: 'Rehabilítame Kids | Desarrollo temprano en Iquique',
   description:
-    'Equipo de Kinesiología y Fonoaudiología a domicilio en Iquique y Alto Hospicio. Atención coordinada para recuperación post hospitalización, neurológica y respiratoria.',
+    'Kinesiología y Fonoaudiología infantil para acompañar el desarrollo temprano, el movimiento y la comunicación en Iquique.',
   alternates: {
     canonical: '/',
   },
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     icon: '/images/b12/avatar.png',
   },
   openGraph: {
-    title: 'Rehabilitación en equipo a domicilio | Rehabilítame',
-    description: 'Kinesiología y Fonoaudiología trabajan en coordinación para acompañar a personas y familias en Iquique y Alto Hospicio.',
-    images: [{ url: '/images/domicilio-paciente-portada.webp', alt: 'Atención de rehabilitación en el hogar' }],
+    title: 'Rehabilítame Kids | Desarrollo temprano en Iquique',
+    description: 'Movimiento, comunicación y juego. Acompañamos el desarrollo temprano junto a tu familia.',
+    images: [],
     locale: 'es_CL',
     url: '/',
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0D253F',
+  themeColor: '#164e4a',
 }
 
 // Datos estructurados (Schema.org) para que Google entienda que somos un
@@ -50,7 +50,6 @@ const structuredData = {
   telephone: `+${brand.contact.whatsappConsultas}`,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: brand.contact.address,
     addressLocality: 'Iquique',
     addressRegion: 'Tarapacá',
     addressCountry: 'CL',
@@ -58,12 +57,6 @@ const structuredData = {
   areaServed: ['Iquique', 'Alto Hospicio'],
   medicalSpecialty: ['Kinesiología respiratoria', 'Kinesiología maxilofacial', 'Fonoaudiología'],
   sameAs: [brand.contact.instagramUrl],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    opens: '08:00',
-    closes: '20:00',
-  },
 }
 
 // Google tag (GA4 + Google Ads). No se activa hasta que definas

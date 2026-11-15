@@ -1,40 +1,10 @@
-import { Navigation } from "@/components/navigation"
-import { Hero } from "@/components/hero"
-import { ReimbursementSection } from "@/components/reimbursement-section"
-import { Marquee } from "@/components/marquee"
-import { AboutSection } from "@/components/about-section"
-import { ServicesSection } from "@/components/services-section"
-import { EditorialBreak } from "@/components/editorial-break"
-import { ApproachSection } from "@/components/approach-section"
-import { CasesSection } from "@/components/cases-section"
-import { JournalSection } from "@/components/journal-section"
-import { FaqSection } from "@/components/faq-section"
-import { BookingWidgetSection } from "@/components/booking-widget-section"
-import { Footer } from "@/components/footer"
-import { WhatsappFab } from "@/components/whatsapp-fab"
-import { RehabilitationPaths, EvaluationSteps } from "@/components/rehabilitation-sections"
+import type { Metadata } from "next"
+import { KidsHome } from "@/components/kids-home"
 
-export default function Page() {
-  return (
-    <>
-      <Navigation />
-      <main>
-        <Hero />
-        <Marquee />
-        <RehabilitationPaths />
-        <ServicesSection />
-        <AboutSection />
-        <EvaluationSteps />
-        <EditorialBreak />
-        <CasesSection />
-        <ApproachSection />
-        <JournalSection />
-        <ReimbursementSection />
-        <FaqSection />
-        <BookingWidgetSection />
-      </main>
-      <Footer />
-      <WhatsappFab />
-    </>
-  )
+export const metadata: Metadata = {
+  title: "Rehabilítame Kids | Desarrollo temprano en Iquique",
+  description: "Kinesiología y Fonoaudiología infantil en Iquique. Acompañamos el desarrollo motor, la comunicación y el juego con participación de la familia.",
+  alternates: { canonical: "/" },
+  openGraph: { title: "Rehabilítame Kids · Movimiento, comunicación y juego", description: "Acompañamiento del desarrollo temprano con Kinesiología y Fonoaudiología infantil en Iquique.", url: "/", images: [] },
 }
+export default function Page() { return <KidsHome /> }
